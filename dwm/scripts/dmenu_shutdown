@@ -35,6 +35,6 @@ then
 
 elif [ "$CHOICE" == "suspend" ]
 then
-	$HOME/.local/share/bin/suspend.sh
+	$HOME/.local/bin/suspend.sh
 
 fi
