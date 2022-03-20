@@ -1,38 +1,40 @@
-#!/bin/bash
-#title           : dmenu_shutdown
-#description     : A simple dmenu call to logout, hibernate, shutdown, sleep, or restart 
-#author      : Arne Küderle
-#date            : 201602
-#notes           : Install dmenu to use this script. For the best experience create a hotkey
+#!/usr/bin/sh
+# author GG weebcyberpunk@gmail.com
+# version 0.0.0
+# since Mar 19, 2022
 
-#
-# Edited by GG
-#
+ACTIONS=("logout\nrestart\nshutdown\nlock\nsuspend")
+CHOICE="$(echo -e $ACTIONS | dmenu -p 'Action: ')"
 
-actions=("logout\nrestart\nshutdown\nlock\nsuspend")
-action=$(echo -e $actions | dmenu -p 'Action: ')
-case "$action" in
-    logout)
-        pkill dwm
-        ;;
-        
-    restart)
-        systemctl reboot
-        ;;
+if [ "$CHOICE" == "logout" ]
+then
+	killall dwm
 
-    shutdown)
-        systemctl poweroff
-        
-        ;;
+elif [ "$CHOICE" == "restart" ]
+then
+	systemctl restart
 
-    lock)
-        slock
-        ;;
+elif [ "$CHOICE" == "shutdown" ]
+then
+	systemctl poweroff
 
-    suspend)
-        $HOME/.local/bin/suspend.sh
-        ;;
-esac
+elif [ "$CHOICE" == "lock" ]
+then
+	slock &
+	while :
+	do
+		if [ "$(pstree | grep slock)" != "" ]
+		then
+			sleep 5s
 
-# link to repo original repo: https://github.com/AKuederle/dmenu_tools
-# link to Gabriel de Brito's version: https://github.com/gioiacyberpunk/dotfiles
+		else
+			exit
+
+		fi
+	done
+
+elif [ "$CHOICE" == "suspend" ]
+then
+	$HOME/.local/share/bin/suspend.sh
+
+fi
