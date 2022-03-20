@@ -28,6 +28,7 @@ then
 			sleep 5s
 
 		else
+			$HOME/.local/bin/dwm_refresh_status.sh
 			exit
 
 		fi
