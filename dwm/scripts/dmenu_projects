@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 cd ~/Projects
-PROJECT="$(ls | dmenu)"
+PROJECT="$(ls | dmenu -p 'Project: ')"
 
 if [ "$PROJECT" != "" ]
 then

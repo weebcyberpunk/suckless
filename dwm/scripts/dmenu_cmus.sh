@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 cd ~/Music
-ALBUM="$(stat */* --format "%n" | awk -F '/' '{print substr($2, 0)}' | dmenu)"
+ALBUM="$(stat */* --format "%n" | awk -F '/' '{print substr($2, 0)}' | dmenu -p 'Album: ')"
 
 if [ "$ALBUM" != "" ]
 then

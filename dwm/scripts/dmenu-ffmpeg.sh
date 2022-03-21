@@ -1,7 +1,7 @@
 cd ~/Desktop # so all records go to ~/Desktop
 TERM='st'
 ACTIONS=("Record screen\nRecord cam\nRecord mic\nTake a shot\nRecord all")
-CHOICE=$(echo -e $ACTIONS | dmenu)
+CHOICE=$(echo -e $ACTIONS | dmenu -p "Record action: ")
 
 if [ "$CHOICE" == 'Record screen' ]
 then
