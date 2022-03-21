@@ -12,7 +12,7 @@ then
 
 elif [ "$CHOICE" == "restart" ]
 then
-	systemctl restart
+	systemctl reboot
 
 elif [ "$CHOICE" == "shutdown" ]
 then
