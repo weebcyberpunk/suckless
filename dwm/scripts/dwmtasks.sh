@@ -18,10 +18,10 @@ function update_packages() {
 
 	elif [ $UPDATES -eq 1 ]
 	then
-		notify-send "You have $UPDATES package to upgrade" "Perform full system upgrade with pacman -Syu"
+		notify-send "You have $UPDATES package to upgrade" "Perform full system upgrade with yay"
 
 	else
-		notify-send "You have $UPDATES packages to upgrade" "Perform full system upgrade with pacman -Syu"
+		notify-send "You have $UPDATES packages to upgrade" "Perform full system upgrade with yay"
 	fi
 
 }
