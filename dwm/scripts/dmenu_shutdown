@@ -8,7 +8,7 @@ CHOICE="$(echo -e $ACTIONS | dmenu -p 'Action: ')"
 
 if [ "$CHOICE" == "logout" ]
 then
-	killall dwm
+	pkill dwm
 
 elif [ "$CHOICE" == "restart" ]
 then
