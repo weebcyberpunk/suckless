@@ -29,7 +29,6 @@ static const char *const autostart[] = {
 	"picom", NULL,
 	"lxsession", NULL,
 	"dunst", NULL,
-	"clipmenud", NULL,
 	"/home/gg/.local/bin/dwmtasks.sh", NULL,
 	NULL /* terminate */
 };
@@ -96,10 +95,10 @@ static const char *open_email_cmd[] = { TERM, "-e", "neomutt", NULL };
 static const char *open_htop_cmd[] = { TERM, "-e", "htop", NULL };
 static const char *open_rss_cmd[] = { TERM, "-e", "newsboat", NULL };
 static const char *open_fm_cmd[] = { TERM, "-e", "lf", NULL };
+static const char *sys_upgrade[] = { TERM, "-e", "yay", NULL };
 
 // dmenu
 static const char *passmenucmd[] = { "passmenu", "--type", NULL };
-static const char *clipmenucmd[] = { "clipmenu", NULL };
 static const char *logoutcmd[] = { "/home/gg/.local/bin/dmenu_shutdown", NULL };
 static const char *projects_menu_cmd[] = { "/home/gg/.local/bin/dmenu_projects", NULL };
 static const char *web_menu_cmd[] = { "/home/gg/.local/bin/dmenu_web", NULL };
@@ -159,12 +158,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      spawn,          {.v = open_htop_cmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = open_rss_cmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = open_fm_cmd } },
+	{ MODKEY,                       XK_u,      spawn,          {.v = sys_upgrade } },
 
 	// dmenu
 	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = passmenucmd } },
-	{ MODKEY|ControlMask,           XK_c,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY|ControlMask,           XK_l,      spawn,          {.v = logoutcmd } },	
-	{ MODKEY,                       XK_period, spawn,          {.v = projects_menu_cmd } },	
+	{ MODKEY,                       XK_d,      spawn,          {.v = projects_menu_cmd } },	
 	{ MODKEY,                       XK_b,      spawn,          {.v = web_menu_cmd } },	
 	{ MODKEY|ControlMask,           XK_r,      spawn,          {.v = ffmpegcmd } },	
 	{ MODKEY,                       XK_c,      spawn,          {.v = dmenu_cmus_cmd } },
