@@ -19,7 +19,7 @@ static const int logoh = 6;
 
 static XRectangle rectangles[9] = {
 	/* x    y       w       h */
-		{  1,   0,      7,      1 },
+	{  1,   0,      7,      1 },
 	{  0,   0,      1,      5 },
 	{  1,   4,      7,      1 },
 	{  3,   2,      1,      2 },
