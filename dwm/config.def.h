@@ -43,19 +43,20 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
 	{ "Gnome-screenshot", NULL, "Screenshot",  0,          1,           0,         1,       -1 },
+	{ "Galculator",   NULL, "galculator",  	   0,          1,           0,         1,       -1 },
 	{ TERM          , NULL,     NULL,          0,          0,           1,         0,       -1 },
 
 };
 
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
+static const int nmaster     = 2;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ " ",      tile },    /* first entry is default */
+	{ " ",      tile },    /* first entry is default */
 	{ " ",      NULL },    /* no layout function means floating behavior */
 	{ " ",      monocle },
 };
