@@ -6,7 +6,7 @@ then
 	SITE="$(grep $PAGE ~/.config/qutebrowser/quickmarks | awk '{print substr($2, 0)}')"
 	if [ "$SITE" == "" ]
 	then
-		qutebrowser $PAGE
+		qutebrowser "$PAGE"
 	else
 		qutebrowser $SITE
 	fi
