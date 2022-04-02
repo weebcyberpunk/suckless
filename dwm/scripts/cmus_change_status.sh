@@ -29,5 +29,5 @@ notify () {
 }
 
 # calls notify and refresh dwm panel
-notify
 $HOME/.local/bin/dwm_refresh_status.sh
+notify
