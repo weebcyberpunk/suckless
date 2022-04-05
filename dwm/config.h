@@ -97,6 +97,7 @@ static const char *open_htop_cmd[] = { TERM, "-e", "htop", NULL };
 static const char *open_rss_cmd[] = { TERM, "-e", "newsboat", NULL };
 static const char *open_fm_cmd[] = { TERM, "-e", "lf", NULL };
 static const char *sys_upgrade[] = { TERM, "-e", "yay", NULL };
+static const char *open_calculator[] = { "galculator", NULL };
 
 // dmenu
 static const char *passmenucmd[] = { "passmenu", "--type", NULL };
@@ -104,7 +105,6 @@ static const char *logoutcmd[] = { "/home/gg/.local/bin/dmenu_shutdown", NULL };
 static const char *projects_menu_cmd[] = { "/home/gg/.local/bin/dmenu_projects", NULL };
 static const char *web_menu_cmd[] = { "/home/gg/.local/bin/dmenu_web", NULL };
 static const char *ffmpegcmd[] = { "/home/gg/.local/bin/dmenu-ffmpeg.sh", NULL };
-static const char *dmenu_cmus_cmd[] = { "/home/gg/.local/bin/dmenu_cmus.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -160,6 +160,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          {.v = open_rss_cmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = open_fm_cmd } },
 	{ MODKEY,                       XK_u,      spawn,          {.v = sys_upgrade } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = open_calculator } },
 
 	// dmenu
 	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = passmenucmd } },
@@ -167,7 +168,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = projects_menu_cmd } },	
 	{ MODKEY,                       XK_b,      spawn,          {.v = web_menu_cmd } },	
 	{ MODKEY|ControlMask,           XK_r,      spawn,          {.v = ffmpegcmd } },	
-	{ MODKEY,                       XK_c,      spawn,          {.v = dmenu_cmus_cmd } },
 	
 	// audio
 	{ ControlMask|Mod1Mask,         XK_k,      spawn,          {.v = increase_vol_cmd } },
