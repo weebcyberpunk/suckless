@@ -1,9 +1,13 @@
 #!/usr/bin/sh
 
-status () {
+BAT_NOTIFIED="no"
+BAT_ALERTED="no"
+
+while :
+do
 
 	# cmus widget
-	echo -n "  "
+	STATUS=" "
 
 	CMUS_ARTIST="$(cmus-remote -Q 2> /dev/null | grep ' artist ' | awk '{print substr($0, 12)}')"  
 	CMUS_TRACK="$(cmus-remote -Q 2> /dev/null | grep ' title ' | awk '{print substr($0, 11)}')"
@@ -11,31 +15,30 @@ status () {
 
 	if [ "$CMUS_ARTIST" = "" ]
 	then
-		echo -n "nothing playing"
+		STATUS="$STATUS nothing playing"
 
 	else
 		if [ "$CMUS_ARTIST" = "Various" ]
 		then
-			echo -n "$CMUS_TRACK "
+			STATUS="$STATUS $CMUS_TRACK "
 		else
-			echo -n "$CMUS_ARTIST - $CMUS_TRACK "
+			STATUS="$STATUS $CMUS_ARTIST - $CMUS_TRACK "
 		fi
 
 		if [ "$CMUS_STATUS" == "playing" ]
 		then
-			echo -n "契"
+			STATUS="$STATUS契"
 		else
-			echo -n ""
+			STATUS="$STATUS"
 		fi
 	fi
 
-	echo -n " | "
+	STATUS="$STATUS |"
 
 	# pamixer volume
-	echo -n " "
-	echo -n "$(pamixer --get-volume-human)"
+	STATUS="$STATUS  $(pamixer --get-volume-human)"
 
-	echo -n " | "
+	STATUS="$STATUS | "
 
 	# internet widget
 	WLAN_STATUS=$(ip link | grep wlan0 | awk -F "," '{print $3}')
@@ -43,15 +46,15 @@ status () {
 
 	if [ "$WLAN_STATUS" = "UP" ]
 	then
-		echo -n "直 "
+		STATUS="$STATUS直 "
 	elif [ "$ENP_STATUS" = "UP" ]
 	then
-		echo -n "爵 "
+		STATUS="$STATUS爵 "
 	else
-		echo -n "睊 "
+		STATUS="$STATUS睊 "
 	fi
 
-	echo -n " | "
+	STATUS="$STATUS | "
 
 	# battery widget and notify
 	BATTERY="$(cat /sys/class/power_supply/BAT1/capacity)"
@@ -61,48 +64,57 @@ status () {
 	then
 		if [ $CHARGING == "Charging" ]
 		then
-			echo -n " $BATTERY%"
+			STATUS="$STATUS $BATTERY%"
+			BAT_NOTIFIED="no"
+			BAT_ALERTED="no"
 
 		else
 
 			if [ $BATTERY -gt 80 ]
 			then
-				echo -n " $BATTERY%"
+				STATUS="$STATUS $BATTERY%"
 
 			elif [ $BATTERY -gt 60 ]
 			then
-				echo -n " $BATTERY%"
+				STATUS="$STATUS $BATTERY%"
 
 			elif [ $BATTERY -gt 40 ]
 			then
-				echo -n " $BATTERY%"
+				STATUS="$STATUS $BATTERY%"
 
 			elif [ $BATTERY -gt 20 ]
 			then
-				echo -n " $BATTERY%"
+				STATUS="$STATUS $BATTERY%"
 
 			elif [ $BATTERY -gt 10 ]
 			then
-				echo -n " $BATTERY%"
+				STATUS="$STATUS $BATTERY%"
+				if [ "$BAT_NOTIFIED" == "no" ]
+				then
+					notify-send 'Low battery level.' 'Battery level is below 20%. Please connect the computer to the charger.'
+					BAT_NOTIFIED="yes"
+				fi
 
 			else
-				echo -n " $BATTERY%"
+				STATUS="$STATUS $BATTERY%"
+				if [ "$BAT_ALERTED" == "no" ]
+				then
+					notify-send --urgency=critical 'Critical battery level.' 'Battery level is below 10%. Please connect the computer to the charger immediately.'
+					BAT_ALERTED="yes"
+				fi
 				
 			fi
 
 		fi
 
-	echo -n " | "
+	STATUS="$STATUS | "
 
 	fi
 
 	# date
-	echo -n "$(date +'%a %b %d, %H:%M')"
-}
+	STATUS="$STATUS$(date +'%a %b %d, %H:%M')"
 
-while :
-do
-	xsetroot -name "$(status)"
+	xsetroot -name "$STATUS"
 
 	# sleep so it doesn't take all our resources
 	sleep 1m
