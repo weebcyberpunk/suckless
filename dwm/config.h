@@ -88,7 +88,7 @@ static const char *next_song_cmd[] = { "cmus-remote", "-n", NULL };
 static const char *previous_song_cmd[] = { "cmus-remote", "-r", NULL };
 
 // launchers
-static const char *open_browser_cmd[] = { "brave", NULL };
+static const char *open_browser_cmd[] = { "firefox", NULL };
 static const char *open_vim_cmd[] = { TERM, "-e", "vim", NULL };
 static const char *open_cmus_cmd[] = { "/home/gg/.local/bin/cmus_open.sh", NULL };
 static const char *screenshot_cmd[] = { "gnome-screenshot", "-i", NULL };
