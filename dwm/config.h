@@ -88,7 +88,7 @@ static const char *next_song_cmd[] = { "cmus-remote", "-n", NULL };
 static const char *previous_song_cmd[] = { "cmus-remote", "-r", NULL };
 
 // launchers
-static const char *open_browser_cmd[] = { "qutebrowser", NULL };
+static const char *open_browser_cmd[] = { "brave", NULL };
 static const char *open_vim_cmd[] = { TERM, "-e", "vim", NULL };
 static const char *open_cmus_cmd[] = { "/home/gg/.local/bin/cmus_open.sh", NULL };
 static const char *screenshot_cmd[] = { "gnome-screenshot", "-i", NULL };
@@ -104,6 +104,7 @@ static const char *passmenucmd[] = { "passmenu", "--type", NULL };
 static const char *logoutcmd[] = { "/home/gg/.local/bin/dmenu_shutdown", NULL };
 static const char *projects_menu_cmd[] = { "/home/gg/.local/bin/dmenu_projects", NULL };
 static const char *web_menu_cmd[] = { "/home/gg/.local/bin/dmenu_web", NULL };
+static const char *web_search_cmd[] = { "/home/gg/.local/bin/dmenu_websearch", NULL };
 static const char *ffmpegcmd[] = { "/home/gg/.local/bin/dmenu-ffmpeg.sh", NULL };
 
 static Key keys[] = {
@@ -167,6 +168,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_l,      spawn,          {.v = logoutcmd } },	
 	{ MODKEY,                       XK_d,      spawn,          {.v = projects_menu_cmd } },	
 	{ MODKEY,                       XK_b,      spawn,          {.v = web_menu_cmd } },	
+	{ MODKEY,                       XK_o,      spawn,          {.v = web_search_cmd } },	
 	{ MODKEY|ControlMask,           XK_r,      spawn,          {.v = ffmpegcmd } },	
 	
 	// audio
