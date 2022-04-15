@@ -6,5 +6,5 @@ PROJECT="$(ls | dmenu -p 'Project: ')"
 if [ "$PROJECT" != "" ]
 then
 	cd $PROJECT
-	st -e vim
+	st -e nvim
 fi
