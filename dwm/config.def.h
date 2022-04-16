@@ -10,11 +10,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=15:antialias=true:hinting=true" };
 static const char dmenufont[]       = "UbuntuMono Nerd Font:size=15";
-static const char col_gray1[]       = "#23252E";
-static const char col_gray2[]       = "#23252E";
+static const char col_gray1[]       = "#1E1F29";
+static const char col_gray2[]       = "#1E1F29";
 static const char col_gray3[]       = "#ffffff";
 static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#2777FF";
+static const char col_cyan[]        = "#bd93f9";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
