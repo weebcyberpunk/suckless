@@ -30,6 +30,7 @@ static const char *const autostart[] = {
 	"lxsession", NULL,
 	"dunst", NULL,
 	"/home/gg/.local/bin/dwmtasks.sh", NULL,
+	"/home/gg/.local/bin/mpdchangestatus", NULL,
 	NULL /* terminate */
 };
 
@@ -83,14 +84,14 @@ static const char *termcmd[]  = { TERM, NULL };
 static const char *increase_vol_cmd[] = { "/home/gg/.local/bin/pamixer_volume.sh", "--increase", NULL };
 static const char *decrease_vol_cmd[] = { "/home/gg/.local/bin/pamixer_volume.sh", "--decrease", NULL };
 static const char *toggle_mute_cmd[] = { "/home/gg/.local/bin/pamixer_volume.sh", "--mute", NULL };
-static const char *pause_cmd[] = { "cmus-remote", "-u", NULL };
-static const char *next_song_cmd[] = { "cmus-remote", "-n", NULL };
-static const char *previous_song_cmd[] = { "cmus-remote", "-r", NULL };
+static const char *pause_cmd[] = { "mpc", "toggle", NULL };
+static const char *next_song_cmd[] = { "mpc", "next", NULL };
+static const char *previous_song_cmd[] = { "mpc", "prev", NULL };
 
 // launchers
 static const char *open_browser_cmd[] = { "firefox", NULL };
 static const char *open_vim_cmd[] = { TERM, "-e", "nvim", NULL };
-static const char *open_cmus_cmd[] = { "/home/gg/.local/bin/cmus_open.sh", NULL };
+static const char *open_ncmpcpp_cmd[] = { TERM, "-e", "ncmpcpp", NULL };
 static const char *screenshot_cmd[] = { "gnome-screenshot", "-i", NULL };
 static const char *open_email_cmd[] = { TERM, "-e", "neomutt", NULL };
 static const char *open_htop_cmd[] = { TERM, "-e", "htop", NULL };
@@ -154,7 +155,7 @@ static Key keys[] = {
 	// launchers
 	{ MODKEY,                       XK_n,      spawn,          {.v = open_browser_cmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = open_vim_cmd } },
-	{ MODKEY,                       XK_m,      spawn,          {.v = open_cmus_cmd } },	
+	{ MODKEY,                       XK_m,      spawn,          {.v = open_ncmpcpp_cmd } },	
 	{ MODKEY,                       XK_p,      spawn,          {.v = screenshot_cmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = open_email_cmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = open_htop_cmd } },

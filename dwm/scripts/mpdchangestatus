@@ -1,0 +1,39 @@
+#!/usr/bin/sh
+
+# author GG weebcyberpunk@gmail.com
+# version 0.0.0
+# since Apr 16, 2022
+
+# send notify with libnotify with mpd info
+notify () {
+
+	if [ "$(mpc playlist)" != "" ]
+	then
+
+		STATE="$(mpc status '%state%')"
+		if [ "$STATE" == "playing" ]
+		then
+			STATUS_ICON="契"
+
+		else
+			STATUS_ICON=""
+
+		fi
+
+		ARTIST="$(mpc -f '%artist%' current)"
+		if [ "$ARTIST" == "Various" ]
+		then
+			notify-send --expire-time=3000 "$(mpc -f '%title%' current) $STATUS_ICON" "$(mpc -f '%track% - %album%' current)"
+
+		else
+			notify-send --expire-time=3000 "$(mpc -f '%artist% - %title%' current) $STATUS_ICON" "$(mpc -f '%track% - %album%' current)"
+		fi
+	fi
+}
+
+while :
+do
+	mpc idle player
+	notify
+	$HOME/.local/bin/dwm_refresh_status.sh
+done
