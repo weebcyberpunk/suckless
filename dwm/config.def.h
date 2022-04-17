@@ -1,4 +1,5 @@
 #define TERM "st"
+#define SCRIPTS_HOME "/home/gg/.local/bin/"
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -24,13 +25,13 @@ static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0}
 static const XPoint stickyiconbb    = {4,8};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
 
 static const char *const autostart[] = {
-	"/home/gg/.local/bin/dwmstatus.sh", NULL,
+	SCRIPTS_HOME"dwmstatus.sh", NULL,
 	"nitrogen", "--restore", NULL,
 	"picom", NULL,
 	"lxsession", NULL,
 	"dunst", NULL,
-	"/home/gg/.local/bin/dwmtasks.sh", NULL,
-	"/home/gg/.local/bin/mpdchangestatus", NULL,
+	SCRIPTS_HOME"dwmtasks.sh", NULL,
+	SCRIPTS_HOME"mpdchangestatus", NULL,
 	NULL /* terminate */
 };
 
@@ -81,12 +82,15 @@ static const char *termcmd[]  = { TERM, NULL };
 // custom commands
 //
 // audio
-static const char *increase_vol_cmd[] = { "/home/gg/.local/bin/pamixer_volume.sh", "--increase", NULL };
-static const char *decrease_vol_cmd[] = { "/home/gg/.local/bin/pamixer_volume.sh", "--decrease", NULL };
-static const char *toggle_mute_cmd[] = { "/home/gg/.local/bin/pamixer_volume.sh", "--mute", NULL };
+static const char *increase_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume.sh", "--increase", NULL };
+static const char *decrease_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume.sh", "--decrease", NULL };
+static const char *toggle_mute_cmd[] = { SCRIPTS_HOME"pamixer_volume.sh", "--mute", NULL };
 static const char *pause_cmd[] = { "mpc", "toggle", NULL };
 static const char *next_song_cmd[] = { "mpc", "next", NULL };
 static const char *previous_song_cmd[] = { "mpc", "prev", NULL };
+static const char *inc_mpd_vol[] = { "mpc", "volume", "+10", NULL };
+static const char *dec_mpd_vol[] = { "mpc", "volume", "-10", NULL };
+static const char *clear_mpd_list[] = { "mpc", "clear", NULL };
 
 // launchers
 static const char *open_browser_cmd[] = { "firefox", NULL };
@@ -102,11 +106,12 @@ static const char *open_calculator[] = { "galculator", NULL };
 
 // dmenu
 static const char *passmenucmd[] = { "passmenu", "--type", NULL };
-static const char *logoutcmd[] = { "/home/gg/.local/bin/dmenu_shutdown", NULL };
-static const char *projects_menu_cmd[] = { "/home/gg/.local/bin/dmenu_projects", NULL };
-static const char *web_menu_cmd[] = { "/home/gg/.local/bin/dmenu_web", NULL };
-static const char *web_search_cmd[] = { "/home/gg/.local/bin/dmenu_websearch", NULL };
-static const char *ffmpegcmd[] = { "/home/gg/.local/bin/dmenu-ffmpeg.sh", NULL };
+static const char *logoutcmd[] = { SCRIPTS_HOME"dmenu_shutdown", NULL };
+static const char *projects_menu_cmd[] = { SCRIPTS_HOME"dmenu_projects", NULL };
+static const char *web_menu_cmd[] = { SCRIPTS_HOME"dmenu_web", NULL };
+static const char *web_search_cmd[] = { SCRIPTS_HOME"dmenu_websearch", NULL };
+static const char *ffmpegcmd[] = { SCRIPTS_HOME"dmenu-ffmpeg.sh", NULL };
+static const char *musicmenu[] = { SCRIPTS_HOME"dmenu_mpd.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -171,6 +176,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      spawn,          {.v = web_menu_cmd } },	
 	{ MODKEY,                       XK_o,      spawn,          {.v = web_search_cmd } },	
 	{ MODKEY|ControlMask,           XK_r,      spawn,          {.v = ffmpegcmd } },	
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = musicmenu } },	
 	
 	// audio
 	{ ControlMask|Mod1Mask,         XK_k,      spawn,          {.v = increase_vol_cmd } },
@@ -179,6 +185,9 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,         XK_p,      spawn,          {.v = pause_cmd } },
 	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = next_song_cmd } },
 	{ ControlMask|Mod1Mask,         XK_h,      spawn,          {.v = previous_song_cmd } },
+	{ ControlMask|Mod1Mask,         XK_equal,  spawn,          {.v = inc_mpd_vol } },
+	{ ControlMask|Mod1Mask,         XK_minus,  spawn,          {.v = dec_mpd_vol } },
+	{ ControlMask|Mod1Mask,         XK_c,      spawn,          {.v = clear_mpd_list } },
 };
 
 /* button definitions */

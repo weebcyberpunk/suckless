@@ -8,7 +8,9 @@ CHOICE="$(echo -e $ACTIONS | dmenu -p 'Action: ')"
 
 if [ "$CHOICE" == "logout" ]
 then
-	pkill dwm
+	# that's the only way I found to not having any random mpd script
+	# running
+	killall -u $USER
 
 elif [ "$CHOICE" == "restart" ]
 then
