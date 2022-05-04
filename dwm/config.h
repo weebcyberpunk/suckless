@@ -9,8 +9,8 @@ static const unsigned int gappx     = 22;       /* default gap between windows i
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=15:antialias=true:hinting=true" };
-static const char dmenufont[]       = "UbuntuMono Nerd Font:size=15";
+static const char *fonts[]          = { "Fira Code Nerd Font:style=Medium:size=13:antialias=true:hinting=true" };
+static const char dmenufont[]       = "Fira Code Nerd Font:style=Medium:size=13";
 static const char col_gray1[]       = "#1E1F29";
 static const char col_gray2[]       = "#1E1F29";
 static const char col_gray3[]       = "#ffffff";

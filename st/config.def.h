@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Ubuntu Mono Nerd Font:pixelsize=26:antialias=true:autohint=true";
+static char *font = "Fira Code Nerd Font:style=Medium:pixelsize=23:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*
