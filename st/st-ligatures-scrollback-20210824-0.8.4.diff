@@ -22,7 +22,7 @@ index 470ac86..38240da 100644
  $(OBJ): config.h config.mk
  
 diff --git a/config.mk b/config.mk
-index 1d2f0e2..fd92921 100644
+index c070a4a..3d236f0 100644
 --- a/config.mk
 +++ b/config.mk
 @@ -15,10 +15,12 @@ PKG_CONFIG = pkg-config
@@ -32,7 +32,7 @@ index 1d2f0e2..fd92921 100644
 -       `$(PKG_CONFIG) --cflags freetype2`
 +       `$(PKG_CONFIG) --cflags freetype2` \
 +       `$(PKG_CONFIG) --cflags harfbuzz`
- LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender\
+ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft \
         `$(PKG_CONFIG) --libs fontconfig` \
 -       `$(PKG_CONFIG) --libs freetype2`
 +       `$(PKG_CONFIG) --libs freetype2` \
@@ -42,10 +42,10 @@ index 1d2f0e2..fd92921 100644
  STCPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600
 diff --git a/hb.c b/hb.c
 new file mode 100644
-index 0000000..bd3fb71
+index 0000000..f9c4f76
 --- /dev/null
 +++ b/hb.c
-@@ -0,0 +1,136 @@
+@@ -0,0 +1,144 @@
 +#include <stdlib.h>
 +#include <stdio.h>
 +#include <math.h>
@@ -54,6 +54,8 @@ index 0000000..bd3fb71
 +#include <hb-ft.h>
 +
 +#include "st.h"
++
++#define FEATURE(c1,c2,c3,c4) { .tag = HB_TAG(c1,c2,c3,c4), .value = 1, .start = HB_FEATURE_GLOBAL_START, .end = HB_FEATURE_GLOBAL_END }
 +
 +void hbtransformsegment(XftFont *xfont, const Glyph *string, hb_codepoint_t *codepoints, int start, int length);
 +hb_font_t *hbfindfont(XftFont *match);
@@ -65,6 +67,12 @@ index 0000000..bd3fb71
 +
 +static int hbfontslen = 0;
 +static HbFontMatch *hbfontcache = NULL;
++
++/*
++ * Replace 0 with a list of font features, wrapped in FEATURE macro, e.g.
++ * FEATURE('c', 'a', 'l', 't'), FEATURE('d', 'l', 'i', 'g')
++ */
++hb_feature_t features[] = { 0 };
 +
 +void
 +hbunloadfonts()
@@ -107,7 +115,7 @@ index 0000000..bd3fb71
 +hbtransform(XftGlyphFontSpec *specs, const Glyph *glyphs, size_t len, int x, int y)
 +{
 +	int start = 0, length = 1, gstart = 0;
-+	hb_codepoint_t *codepoints = calloc(len, sizeof(hb_codepoint_t));
++	hb_codepoint_t *codepoints = calloc((unsigned int)len, sizeof(hb_codepoint_t));
 +
 +	for (int idx = 1, specidx = 1; idx < len; idx++) {
 +		if (glyphs[idx].mode & ATTR_WDUMMY) {
@@ -168,7 +176,7 @@ index 0000000..bd3fb71
 +	}
 +
 +	/* Shape the segment. */
-+	hb_shape(font, buffer, NULL, 0);
++	hb_shape(font, buffer, features, sizeof(features));
 +
 +	/* Get new glyph info. */
 +	hb_glyph_info_t *info = hb_buffer_get_glyph_infos(buffer, NULL);
@@ -184,33 +192,32 @@ index 0000000..bd3fb71
 +}
 diff --git a/hb.h b/hb.h
 new file mode 100644
-index 0000000..a209238
+index 0000000..07888df
 --- /dev/null
 +++ b/hb.h
-@@ -0,0 +1,7 @@
+@@ -0,0 +1,6 @@
 +#include <X11/Xft/Xft.h>
 +#include <hb.h>
 +#include <hb-ft.h>
 +
 +void hbunloadfonts();
 +void hbtransform(XftGlyphFontSpec *, const Glyph *, size_t, int, int);
-+
 diff --git a/st.c b/st.c
-index f8b6f67..a6c3ee7 100644
+index edec064..ea13c13 100644
 --- a/st.c
 +++ b/st.c
-@@ -2656,7 +2656,8 @@ draw(void)
+@@ -2652,7 +2652,8 @@ draw(void)
  	drawregion(0, 0, term.col, term.row);
-	if (term.scr == 0)
-		xdrawcursor(cx, term.c.y, term.line[term.c.y][cx],
+ 	if (term.scr == 0)
+ 		xdrawcursor(cx, term.c.y, term.line[term.c.y][cx],
 -				term.ocx, term.ocy, term.line[term.ocy][term.ocx]);
 +				term.ocx, term.ocy, term.line[term.ocy][term.ocx],
 +				term.line[term.ocy], term.col);
- 	term.ocx = cx, term.ocy = term.c.y;
+ 	term.ocx = cx;
+ 	term.ocy = term.c.y;
  	xfinishdraw();
- 	xximspot(term.ocx, term.ocy);
 diff --git a/st.h b/st.h
-index c67ebc3..073ae82 100644
+index f44e1d3..00c796c 100644
 --- a/st.h
 +++ b/st.h
 @@ -11,7 +11,8 @@
@@ -245,10 +252,10 @@ index a6ef1b9..bc0d180 100644
  void xfinishdraw(void);
  void xloadcols(void);
 diff --git a/x.c b/x.c
-index 139f7ff..eaf764f 100644
+index 210f184..f6d67ef 100644
 --- a/x.c
 +++ b/x.c
-@@ -19,6 +19,7 @@ static char *argv0;
+@@ -19,6 +19,7 @@ char *argv0;
  #include "arg.h"
  #include "st.h"
  #include "win.h"
@@ -256,7 +263,7 @@ index 139f7ff..eaf764f 100644
  
  /* types used in config.h */
  typedef struct {
-@@ -1040,6 +1041,9 @@ xunloadfont(Font *f)
+@@ -1031,6 +1032,9 @@ xunloadfont(Font *f)
  void
  xunloadfonts(void)
  {
@@ -266,7 +273,7 @@ index 139f7ff..eaf764f 100644
  	/* Free the loaded fonts in the font cache.  */
  	while (frclen > 0)
  		XftFontClose(xw.dpy, frc[--frclen].font);
-@@ -1246,7 +1250,7 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
+@@ -1229,7 +1233,7 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
  		mode = glyphs[i].mode;
  
  		/* Skip dummy wide-character spacing. */
@@ -275,7 +282,7 @@ index 139f7ff..eaf764f 100644
  			continue;
  
  		/* Determine font for glyph if different from previous glyph. */
-@@ -1353,6 +1357,9 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
+@@ -1336,6 +1340,9 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
  		numspecs++;
  	}
  
@@ -285,7 +292,7 @@ index 139f7ff..eaf764f 100644
  	return numspecs;
  }
  
-@@ -1502,14 +1509,17 @@ xdrawglyph(Glyph g, int x, int y)
+@@ -1485,14 +1492,17 @@ xdrawglyph(Glyph g, int x, int y)
  }
  
  void
