@@ -13,6 +13,6 @@ then
 	setxkbmap br abnt2 caps:swapescape
 	notify-send 'Changed keymap' 'Keymap was changed to Brazilian ABNT2'
 else
-	setxkbmap us intl caps:swapescape
-	notify-send 'Changed keymap' 'Keymap was changed to American International'
+	setxkbmap us -option caps:swapescape -option compose:menu
+	notify-send 'Changed keymap' 'Keymap was changed to American'
 fi
