@@ -101,42 +101,54 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/*
+ *
+ * Name : Catppuccin
+ * author : tsjazil (https://github.com/tsjazil)
+ * 
+ * Soothing pastel theme for the high-spirited!
+ *
+ */
+
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  /* 8 normal colors */
-  [0] = "#21222c", /* black   */
-  [1] = "#ff5555", /* red     */
-  [2] = "#50fa7b", /* green   */
-  [3] = "#f1fa8c", /* yellow  */
-  [4] = "#bd93f9", /* blue    */
-  [5] = "#ff79c6", /* magenta */
-  [6] = "#8be9fd", /* cyan    */
-  [7] = "#f8f8f2", /* white   */
+	/* 8 normal colors */
+	"#6E6C7E",
+	"#F28FAD",
+	"#ABE9B3",
+	"#FAE3B0",
+	"#96CDFB",
+	"#F5C2E7",
+	"#89DCEB",
+	"#D9E0EE",
 
-  /* 8 bright colors */
-  [8]  = "#6272a4", /* black   */
-  [9]  = "#ff6e6e", /* red     */
-  [10] = "#69ff94", /* green   */
-  [11] = "#ffffa5", /* yellow  */
-  [12] = "#d6acff", /* blue    */
-  [13] = "#ff92df", /* magenta */
-  [14] = "#a4ffff", /* cyan    */
-  [15] = "#ffffff", /* white   */
+	/* 8 bright colors */
+	"#988BA2",
+	"#F28FAD",
+	"#ABE9B3",
+	"#FAE3B0",
+	"#96CDFB",
+	"#F5C2E7",
+	"#89DCEB",
+	"#D9E0EE",
 
-  /* special colors */
-  [256] = "#1E1F29", /* background */
-  [257] = "#f8f8f2", /* foreground */
+
+
+[256] = "#D9E0EE", /* default foreground colour */
+[257] = "#1E1E2E", /* default background colour */
+[258] = "#C3BAC6", /*575268*/
+
 };
 
 
 /*
- * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 0;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 258;
 
 /*
  * Default shape of cursor
@@ -188,7 +200,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
+#define MODKEY ControlMask
 #define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
@@ -197,9 +209,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ MODKEY,               XK_plus,        zoom,           {.f = +1} },
+	{ MODKEY,               XK_minus,       zoom,           {.f = -1} },
+	{ MODKEY,               XK_0,           zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },

@@ -104,7 +104,7 @@ unsigned int tabspaces = 8;
 
 
 /* bg opacity */
-float alpha = 0.93;
+float alpha = 0.95;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
