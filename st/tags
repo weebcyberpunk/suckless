@@ -1,0 +1,713 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/gg/.local/share/suckless/st/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+$(OBJ)	Makefile	/^$(OBJ): config.h config.mk$/;"	t
+-0,0 +1,144	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -0,0 +1,144 @@$/;"	h	newFile:b/hb.c
+-0,0 +1,6	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -0,0 +1,6 @@$/;"	h	newFile:b/hb.h
+-103,6 +103,11	st-hidecursor-0.8.3.diff	/^@@ -103,6 +103,11 @@ typedef struct {$/;"	h	modifiedFile:a/x.c
+-1031,6 +1032,9	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -1031,6 +1032,9 @@ xunloadfont(Font *f)$/;"	h	modifiedFile:a/x.c
+-1060,6 +1061,37	st-newterm-orphan-20210712-4536f46.diff	/^@@ -1060,6 +1061,37 @@ tswapscreen(void)$/;"	h	modifiedFile:a/st.c
+-1061,13 +1071,53	st-scrollback-20210507-4536f46.diff	/^@@ -1061,13 +1071,53 @@ tswapscreen(void)$/;"	h	modifiedFile:a/st.c
+-1077,17 +1127,28	st-scrollback-20210507-4536f46.diff	/^@@ -1077,17 +1127,28 @@ tscrolldown(int orig, int n)$/;"	h	modifiedFile:a/st.c
+-1097,7 +1158,8	st-scrollback-20210507-4536f46.diff	/^@@ -1097,7 +1158,8 @@ tscrollup(int orig, int n)$/;"	h	modifiedFile:a/st.c
+-1099,10 +1111,10	st-hidecursor-0.8.3.diff	/^@@ -1099,10 +1111,10 @@ void$/;"	h	modifiedFile:a/x.c
+-11,7 +11,8	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -11,7 +11,8 @@$/;"	h	modifiedFile:a/st.h
+-1123,8 +1127,8	st-anysize-0.8.4.diff	/^@@ -1123,8 +1127,8 @@ xinit(int cols, int rows)$/;"	h	modifiedFile:a/x.c
+-1126,7 +1188,7	st-scrollback-20210507-4536f46.diff	/^@@ -1126,7 +1188,7 @@ tnewline(int first_col)$/;"	h	modifiedFile:a/st.c
+-115,6 +119,9	st-scrollback-20210507-4536f46.diff	/^@@ -115,6 +119,9 @@ typedef struct {$/;"	h	modifiedFile:a/st.c
+-1166,8 +1178,9	st-hidecursor-0.8.3.diff	/^@@ -1166,8 +1178,9 @@ xinit(int cols, int rows)$/;"	h	modifiedFile:a/x.c
+-1181,7 +1194,10	st-hidecursor-0.8.3.diff	/^@@ -1181,7 +1194,10 @@ xinit(int cols, int rows)$/;"	h	modifiedFile:a/x.c
+-1213,7 +1217,7	st-anysize-0.8.4.diff	/^@@ -1213,7 +1217,7 @@ xinit(int cols, int rows)$/;"	h	modifiedFile:a/x.c
+-1229,7 +1233,7	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -1229,7 +1233,7 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len,/;"	h	modifiedFile:a/x.c
+-1291,14 +1353,14	st-scrollback-20210507-4536f46.diff	/^@@ -1291,14 +1353,14 @@ void$/;"	h	modifiedFile:a/st.c
+-1336,6 +1340,9	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -1336,6 +1340,9 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len,/;"	h	modifiedFile:a/x.c
+-1346,7 +1350,7	st-anysize-0.8.4.diff	/^@@ -1346,7 +1350,7 @@ void$/;"	h	modifiedFile:a/x.c
+-1436,17 +1440,17	st-anysize-0.8.4.diff	/^@@ -1436,17 +1440,17 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, /;"	h	modifiedFile:a/x.c
+-1485,14 +1492,17	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -1485,14 +1492,17 @@ xdrawglyph(Glyph g, int x, int y)$/;"	h	modifiedFile:a/x.c
+-15,10 +15,12	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -15,10 +15,12 @@ PKG_CONFIG = pkg-config$/;"	h	modifiedFile:a/config.mk
+-153,6 +153,7	st-newterm-orphan-20210712-4536f46.diff	/^@@ -153,6 +153,7 @@ typedef struct {$/;"	h	modifiedFile:a/st.c
+-1540,35 +1544,35	st-anysize-0.8.4.diff	/^@@ -1540,35 +1544,35 @@ xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og)$/;"	h	modifiedFile:a/x.c
+-1673,6 +1689,8	st-hidecursor-0.8.3.diff	/^@@ -1673,6 +1689,8 @@ unmap(XEvent *ev)$/;"	h	modifiedFile:a/x.c
+-1735,11 +1797,11	st-scrollback-20210507-4536f46.diff	/^@@ -1735,11 +1797,11 @@ csihandle(void)$/;"	h	modifiedFile:a/st.c
+-1793,6 +1811,12	st-hidecursor-0.8.3.diff	/^@@ -1793,6 +1811,12 @@ kpress(XEvent *ev)$/;"	h	modifiedFile:a/x.c
+-184,8 +191,8	st-scrollback-20210507-4536f46.diff	/^@@ -184,8 +191,8 @@ static void tnewline(int);$/;"	h	modifiedFile:a/st.c
+-19,6 +19,7	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -19,6 +19,7 @@ char *argv0;$/;"	h	modifiedFile:a/x.c
+-199,6 +199,7	st-newterm-orphan-20210712-4536f46.diff	/^@@ -199,6 +199,7 @@ static Shortcut shortcuts[] = {$/;"	h	modifiedFile:a/config.def.h
+-199,6 +199,8	st-scrollback-20210507-4536f46.diff	/^@@ -199,6 +199,8 @@ static Shortcut shortcuts[] = {$/;"	h	modifiedFile:a/config.def.h
+-22,7 +22,8	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -22,7 +22,8 @@ config.h:$/;"	h	modifiedFile:a/Makefile
+-2251,7 +2313,7	st-scrollback-20210507-4536f46.diff	/^@@ -2251,7 +2313,7 @@ eschandle(uchar ascii)$/;"	h	modifiedFile:a/st.c
+-2264,7 +2326,7	st-scrollback-20210507-4536f46.diff	/^@@ -2264,7 +2326,7 @@ eschandle(uchar ascii)$/;"	h	modifiedFile:a/st.c
+-2474,7 +2536,7	st-scrollback-20210507-4536f46.diff	/^@@ -2474,7 +2536,7 @@ twrite(const char *buf, int buflen, int show_ctrl)$/;"	h	modifiedFile:a/st.c
+-25,7 +25,7	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -25,7 +25,7 @@ enum win_mode {$/;"	h	modifiedFile:a/win.h
+-2511,6 +2573,14	st-scrollback-20210507-4536f46.diff	/^@@ -2511,6 +2573,14 @@ tresize(int col, int row)$/;"	h	modifiedFile:a/st.c
+-2569,7 +2639,7	st-scrollback-20210507-4536f46.diff	/^@@ -2569,7 +2639,7 @@ drawregion(int x1, int y1, int x2, int y2)$/;"	h	modifiedFile:a/st.c
+-2590,8 +2660,9	st-scrollback-20210507-4536f46.diff	/^@@ -2590,8 +2660,9 @@ draw(void)$/;"	h	modifiedFile:a/st.c
+-2652,7 +2652,8	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -2652,7 +2652,8 @@ draw(void)$/;"	h	modifiedFile:a/st.c
+-33,6 +34,7	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -33,6 +34,7 @@ enum glyph_attribute {$/;"	h	modifiedFile:a/st.h
+-331,7 +332,7	st-anysize-0.8.4.diff	/^@@ -331,7 +332,7 @@ ttysend(const Arg *arg)$/;"	h	modifiedFile:a/x.c
+-339,7 +340,7	st-anysize-0.8.4.diff	/^@@ -339,7 +340,7 @@ evcol(XEvent *e)$/;"	h	modifiedFile:a/x.c
+-35,6 +35,7	st-scrollback-20210507-4536f46.diff	/^@@ -35,6 +35,7 @@$/;"	h	modifiedFile:a/st.c
+-4,7 +4,7	st-ligatures-scrollback-20210824-0.8.4.diff	/^@@ -4,7 +4,7 @@$/;"	h	modifiedFile:a/Makefile
+-416,10 +423,10	st-scrollback-20210507-4536f46.diff	/^@@ -416,10 +423,10 @@ tlinelen(int y)$/;"	h	modifiedFile:a/st.c
+-42,6 +43,9	st-scrollback-20210507-4536f46.diff	/^@@ -42,6 +43,9 @@$/;"	h	modifiedFile:a/st.c
+-528,7 +535,7	st-scrollback-20210507-4536f46.diff	/^@@ -528,7 +535,7 @@ selsnap(int *x, int *y, int direction)$/;"	h	modifiedFile:a/st.c
+-543,14 +550,14	st-scrollback-20210507-4536f46.diff	/^@@ -543,14 +550,14 @@ selsnap(int *x, int *y, int direction)$/;"	h	modifiedFile:a/st.c
+-571,14 +578,14	st-scrollback-20210507-4536f46.diff	/^@@ -571,14 +578,14 @@ selsnap(int *x, int *y, int direction)$/;"	h	modifiedFile:a/st.c
+-609,13 +616,13	st-scrollback-20210507-4536f46.diff	/^@@ -609,13 +616,13 @@ getsel(void)$/;"	h	modifiedFile:a/st.c
+-698,6 +703,13	st-hidecursor-0.8.3.diff	/^@@ -698,6 +703,13 @@ brelease(XEvent *e)$/;"	h	modifiedFile:a/x.c
+-723,6 +724,9	st-anysize-0.8.4.diff	/^@@ -723,6 +724,9 @@ cresize(int width, int height)$/;"	h	modifiedFile:a/x.c
+-81,6 +81,7	st-anysize-0.8.4.diff	/^@@ -81,6 +81,7 @@ typedef XftGlyphFontSpec GlyphFontSpec;$/;"	h	modifiedFile:a/x.c
+-81,6 +81,7	st-newterm-orphan-20210712-4536f46.diff	/^@@ -81,6 +81,7 @@ void die(const char *, ...);$/;"	h	modifiedFile:a/st.h
+-81,6 +81,8	st-scrollback-20210507-4536f46.diff	/^@@ -81,6 +81,8 @@ void die(const char *, ...);$/;"	h	modifiedFile:a/st.h
+-840,8 +844,8	st-anysize-0.8.4.diff	/^@@ -840,8 +844,8 @@ xhints(void)$/;"	h	modifiedFile:a/x.c
+-850,6 +857,9	st-scrollback-20210507-4536f46.diff	/^@@ -850,6 +857,9 @@ void$/;"	h	modifiedFile:a/st.c
+.c.o	Makefile	/^.c.o:$/;"	t
+ARGBEGIN	arg.h	/^#define ARGBEGIN	/;"	d
+ARGC	arg.h	/^#define ARGC(/;"	d
+ARGEND	arg.h	/^#define ARGEND	/;"	d
+ARGF	arg.h	/^#define ARGF(/;"	d
+ARG_H__	arg.h	/^#define ARG_H__$/;"	d
+ATTRCMP	st.h	/^#define ATTRCMP(/;"	d
+ATTR_BLINK	st.h	/^	ATTR_BLINK      = 1 << 4,$/;"	e	enum:glyph_attribute
+ATTR_BOLD	st.h	/^	ATTR_BOLD       = 1 << 0,$/;"	e	enum:glyph_attribute
+ATTR_BOLD_FAINT	st.h	/^	ATTR_BOLD_FAINT = ATTR_BOLD | ATTR_FAINT,$/;"	e	enum:glyph_attribute
+ATTR_FAINT	st.h	/^	ATTR_FAINT      = 1 << 1,$/;"	e	enum:glyph_attribute
+ATTR_INVISIBLE	st.h	/^	ATTR_INVISIBLE  = 1 << 6,$/;"	e	enum:glyph_attribute
+ATTR_ITALIC	st.h	/^	ATTR_ITALIC     = 1 << 2,$/;"	e	enum:glyph_attribute
+ATTR_LIGA	st.h	/^	ATTR_LIGA       = 1 << 11,$/;"	e	enum:glyph_attribute
+ATTR_NULL	st.h	/^	ATTR_NULL       = 0,$/;"	e	enum:glyph_attribute
+ATTR_REVERSE	st.h	/^	ATTR_REVERSE    = 1 << 5,$/;"	e	enum:glyph_attribute
+ATTR_STRUCK	st.h	/^	ATTR_STRUCK     = 1 << 7,$/;"	e	enum:glyph_attribute
+ATTR_UNDERLINE	st.h	/^	ATTR_UNDERLINE  = 1 << 3,$/;"	e	enum:glyph_attribute
+ATTR_WDUMMY	st.h	/^	ATTR_WDUMMY     = 1 << 10,$/;"	e	enum:glyph_attribute
+ATTR_WIDE	st.h	/^	ATTR_WIDE       = 1 << 9,$/;"	e	enum:glyph_attribute
+ATTR_WRAP	st.h	/^	ATTR_WRAP       = 1 << 8,$/;"	e	enum:glyph_attribute
+AUTHORS	st.1	/^.SH AUTHORS$/;"	s	title:ST
+Arg	st.h	/^} Arg;$/;"	t	typeref:union:__anon7c9e12e2020a
+BETWEEN	st.h	/^#define BETWEEN(/;"	d
+BUGS	st.1	/^.SH BUGS$/;"	s	title:ST
+CSIEscape	st.c	/^} CSIEscape;$/;"	t	typeref:struct:__anon7c9e12dd0508	file:
+CS_FIN	st.c	/^	CS_FIN$/;"	e	enum:charset	file:
+CS_GER	st.c	/^	CS_GER,$/;"	e	enum:charset	file:
+CS_GRAPHIC0	st.c	/^	CS_GRAPHIC0,$/;"	e	enum:charset	file:
+CS_GRAPHIC1	st.c	/^	CS_GRAPHIC1,$/;"	e	enum:charset	file:
+CS_MULTI	st.c	/^	CS_MULTI,$/;"	e	enum:charset	file:
+CS_UK	st.c	/^	CS_UK,$/;"	e	enum:charset	file:
+CS_USA	st.c	/^	CS_USA,$/;"	e	enum:charset	file:
+CURSOR_DEFAULT	st.c	/^	CURSOR_DEFAULT  = 0,$/;"	e	enum:cursor_state	file:
+CURSOR_LOAD	st.c	/^	CURSOR_LOAD$/;"	e	enum:cursor_movement	file:
+CURSOR_ORIGIN	st.c	/^	CURSOR_ORIGIN   = 2$/;"	e	enum:cursor_state	file:
+CURSOR_SAVE	st.c	/^	CURSOR_SAVE,$/;"	e	enum:cursor_movement	file:
+CURSOR_WRAPNEXT	st.c	/^	CURSOR_WRAPNEXT = 1,$/;"	e	enum:cursor_state	file:
+CUSTOMIZATION	st.1	/^.SH CUSTOMIZATION$/;"	s	title:ST
+Color	x.c	/^typedef XftColor Color;$/;"	t	typeref:typename:XftColor	file:
+DC	x.c	/^} DC;$/;"	t	typeref:struct:__anon0b88b7ae0908	file:
+DEFAULT	st.h	/^#define DEFAULT(/;"	d
+DESCRIPTION	st.1	/^.SH DESCRIPTION$/;"	s	title:ST
+DIVCEIL	st.h	/^#define DIVCEIL(/;"	d
+Draw	x.c	/^typedef XftDraw *Draw;$/;"	t	typeref:typename:XftDraw *	file:
+EARGF	arg.h	/^#define EARGF(/;"	d
+ESC_ALTCHARSET	st.c	/^	ESC_ALTCHARSET = 8,$/;"	e	enum:escape_state	file:
+ESC_ARG_SIZ	st.c	/^#define ESC_ARG_SIZ /;"	d	file:
+ESC_BUF_SIZ	st.c	/^#define ESC_BUF_SIZ /;"	d	file:
+ESC_CSI	st.c	/^	ESC_CSI        = 2,$/;"	e	enum:escape_state	file:
+ESC_START	st.c	/^	ESC_START      = 1,$/;"	e	enum:escape_state	file:
+ESC_STR	st.c	/^	ESC_STR        = 4,  \/* DCS, OSC, PM, APC *\/$/;"	e	enum:escape_state	file:
+ESC_STR_END	st.c	/^	ESC_STR_END    = 16, \/* a final string was encountered *\/$/;"	e	enum:escape_state	file:
+ESC_TEST	st.c	/^	ESC_TEST       = 32, \/* Enter in test mode *\/$/;"	e	enum:escape_state	file:
+ESC_UTF8	st.c	/^	ESC_UTF8       = 64,$/;"	e	enum:escape_state	file:
+FEATURE	hb.c	/^#define FEATURE(/;"	d	file:
+FRC_BOLD	x.c	/^	FRC_BOLD,$/;"	e	enum:__anon0b88b7ae0a03	file:
+FRC_ITALIC	x.c	/^	FRC_ITALIC,$/;"	e	enum:__anon0b88b7ae0a03	file:
+FRC_ITALICBOLD	x.c	/^	FRC_ITALICBOLD$/;"	e	enum:__anon0b88b7ae0a03	file:
+FRC_NORMAL	x.c	/^	FRC_NORMAL,$/;"	e	enum:__anon0b88b7ae0a03	file:
+Font	x.c	/^#define Font /;"	d	file:
+Font	x.c	/^} Font;$/;"	t	typeref:struct:__anon0b88b7ae0808	file:
+Fontcache	x.c	/^} Fontcache;$/;"	t	typeref:struct:__anon0b88b7ae0b08	file:
+Glyph	st.h	/^#define Glyph /;"	d
+Glyph	st.h	/^} Glyph;$/;"	t	typeref:struct:__anon7c9e12e20108
+GlyphFontSpec	x.c	/^typedef XftGlyphFontSpec GlyphFontSpec;$/;"	t	typeref:typename:XftGlyphFontSpec	file:
+HISTSIZE	st.c	/^#define HISTSIZE /;"	d	file:
+HbFontMatch	hb.c	/^} HbFontMatch;$/;"	t	typeref:struct:__anon7c97be200108	file:
+INCS	config.mk	/^INCS = -I$(X11INC) \\$/;"	m
+ISCONTROL	st.c	/^#define ISCONTROL(/;"	d	file:
+ISCONTROLC0	st.c	/^#define ISCONTROLC0(/;"	d	file:
+ISCONTROLC1	st.c	/^#define ISCONTROLC1(/;"	d	file:
+ISDELIM	st.c	/^#define ISDELIM(/;"	d	file:
+IS_SET	st.c	/^#define IS_SET(/;"	d	file:
+IS_SET	x.c	/^#define IS_SET(/;"	d	file:
+IS_TRUECOL	st.h	/^#define IS_TRUECOL(/;"	d
+Key	x.c	/^} Key;$/;"	t	typeref:struct:__anon0b88b7ae0308	file:
+LEN	st.h	/^#define LEN(/;"	d
+LIBS	config.mk	/^LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft \\$/;"	m
+LICENSE	st.1	/^.SH LICENSE$/;"	s	title:ST
+LIMIT	st.h	/^#define LIMIT(/;"	d
+Line	st.h	/^typedef Glyph *Line;$/;"	t	typeref:typename:Glyph *
+MANPREFIX	config.mk	/^MANPREFIX = $(PREFIX)\/share\/man$/;"	m
+MAX	st.h	/^#define MAX(/;"	d
+MIN	st.h	/^#define MIN(/;"	d
+MODBIT	st.h	/^#define MODBIT(/;"	d
+MODE_8BIT	win.h	/^	MODE_8BIT        = 1 << 10,$/;"	e	enum:win_mode
+MODE_ALTSCREEN	st.c	/^	MODE_ALTSCREEN   = 1 << 2,$/;"	e	enum:term_mode	file:
+MODE_APPCURSOR	win.h	/^	MODE_APPCURSOR   = 1 << 8,$/;"	e	enum:win_mode
+MODE_APPKEYPAD	win.h	/^	MODE_APPKEYPAD   = 1 << 2,$/;"	e	enum:win_mode
+MODE_BLINK	win.h	/^	MODE_BLINK       = 1 << 11,$/;"	e	enum:win_mode
+MODE_BRCKTPASTE	win.h	/^	MODE_BRCKTPASTE  = 1 << 16,$/;"	e	enum:win_mode
+MODE_CRLF	st.c	/^	MODE_CRLF        = 1 << 3,$/;"	e	enum:term_mode	file:
+MODE_ECHO	st.c	/^	MODE_ECHO        = 1 << 4,$/;"	e	enum:term_mode	file:
+MODE_FBLINK	win.h	/^	MODE_FBLINK      = 1 << 12,$/;"	e	enum:win_mode
+MODE_FOCUS	win.h	/^	MODE_FOCUS       = 1 << 13,$/;"	e	enum:win_mode
+MODE_FOCUSED	win.h	/^	MODE_FOCUSED     = 1 << 1,$/;"	e	enum:win_mode
+MODE_HIDE	win.h	/^	MODE_HIDE        = 1 << 7,$/;"	e	enum:win_mode
+MODE_INSERT	st.c	/^	MODE_INSERT      = 1 << 1,$/;"	e	enum:term_mode	file:
+MODE_KBDLOCK	win.h	/^	MODE_KBDLOCK     = 1 << 6,$/;"	e	enum:win_mode
+MODE_MOUSE	win.h	/^	MODE_MOUSE       = MODE_MOUSEBTN|MODE_MOUSEMOTION|MODE_MOUSEX10\\$/;"	e	enum:win_mode
+MODE_MOUSEBTN	win.h	/^	MODE_MOUSEBTN    = 1 << 3,$/;"	e	enum:win_mode
+MODE_MOUSEMANY	win.h	/^	MODE_MOUSEMANY   = 1 << 15,$/;"	e	enum:win_mode
+MODE_MOUSEMOTION	win.h	/^	MODE_MOUSEMOTION = 1 << 4,$/;"	e	enum:win_mode
+MODE_MOUSESGR	win.h	/^	MODE_MOUSESGR    = 1 << 9,$/;"	e	enum:win_mode
+MODE_MOUSEX10	win.h	/^	MODE_MOUSEX10    = 1 << 14,$/;"	e	enum:win_mode
+MODE_NUMLOCK	win.h	/^	MODE_NUMLOCK     = 1 << 17,$/;"	e	enum:win_mode
+MODE_PRINT	st.c	/^	MODE_PRINT       = 1 << 5,$/;"	e	enum:term_mode	file:
+MODE_REVERSE	win.h	/^	MODE_REVERSE     = 1 << 5,$/;"	e	enum:win_mode
+MODE_UTF8	st.c	/^	MODE_UTF8        = 1 << 6,$/;"	e	enum:term_mode	file:
+MODE_VISIBLE	win.h	/^	MODE_VISIBLE     = 1 << 0,$/;"	e	enum:win_mode
+MODE_WRAP	st.c	/^	MODE_WRAP        = 1 << 0,$/;"	e	enum:term_mode	file:
+MODKEY	config.def.h	/^#define MODKEY /;"	d
+MODKEY	config.h	/^#define MODKEY /;"	d
+MouseShortcut	x.c	/^} MouseShortcut;$/;"	t	typeref:struct:__anon0b88b7ae0208	file:
+NAME	st.1	/^.SH NAME$/;"	s	title:ST
+OBJ	Makefile	/^OBJ = $(SRC:.c=.o)$/;"	m
+OPTIONS	st.1	/^.SH OPTIONS$/;"	s	title:ST
+PKG_CONFIG	config.mk	/^PKG_CONFIG = pkg-config$/;"	m
+PREFIX	config.mk	/^PREFIX = \/usr\/local$/;"	m
+Rune	st.h	/^typedef uint_least32_t Rune;$/;"	t	typeref:typename:uint_least32_t
+SEE	st.1	/^.SH SEE ALSO$/;"	s	title:ST
+SEL_EMPTY	st.h	/^	SEL_EMPTY = 1,$/;"	e	enum:selection_mode
+SEL_IDLE	st.h	/^	SEL_IDLE = 0,$/;"	e	enum:selection_mode
+SEL_READY	st.h	/^	SEL_READY = 2$/;"	e	enum:selection_mode
+SEL_RECTANGULAR	st.h	/^	SEL_RECTANGULAR = 2$/;"	e	enum:selection_type
+SEL_REGULAR	st.h	/^	SEL_REGULAR = 1,$/;"	e	enum:selection_type
+SHORTCUTS	st.1	/^.SH SHORTCUTS$/;"	s	title:ST
+SNAP_LINE	st.h	/^	SNAP_LINE = 2$/;"	e	enum:selection_snap
+SNAP_WORD	st.h	/^	SNAP_WORD = 1,$/;"	e	enum:selection_snap
+SRC	Makefile	/^SRC = st.c x.c hb.c$/;"	m
+ST	st.1	/^.TH ST 1 st\\-VERSION$/;"	t
+STCFLAGS	config.mk	/^STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS) $(CFLAGS)$/;"	m
+STCPPFLAGS	config.mk	/^STCPPFLAGS = -DVERSION=\\"$(VERSION)\\" -D_XOPEN_SOURCE=600$/;"	m
+STLDFLAGS	config.mk	/^STLDFLAGS = $(LIBS) $(LDFLAGS)$/;"	m
+STREscape	st.c	/^} STREscape;$/;"	t	typeref:struct:__anon7c9e12dd0608	file:
+STR_ARG_SIZ	st.c	/^#define STR_ARG_SIZ /;"	d	file:
+STR_BUF_SIZ	st.c	/^#define STR_BUF_SIZ /;"	d	file:
+SYNOPSIS	st.1	/^.SH SYNOPSIS$/;"	s	title:ST
+Selection	st.c	/^} Selection;$/;"	t	typeref:struct:__anon7c9e12dd0208	file:
+Shortcut	x.c	/^} Shortcut;$/;"	t	typeref:struct:__anon0b88b7ae0108	file:
+TCursor	st.c	/^} TCursor;$/;"	t	typeref:struct:__anon7c9e12dd0108	file:
+TERMMOD	config.def.h	/^#define TERMMOD /;"	d
+TERMMOD	config.h	/^#define TERMMOD /;"	d
+TIMEDIFF	st.h	/^#define TIMEDIFF(/;"	d
+TLINE	st.c	/^#define TLINE(/;"	d	file:
+TRUEBLUE	x.c	/^#define TRUEBLUE(/;"	d	file:
+TRUECOLOR	st.h	/^#define TRUECOLOR(/;"	d
+TRUEGREEN	x.c	/^#define TRUEGREEN(/;"	d	file:
+TRUERED	x.c	/^#define TRUERED(/;"	d	file:
+Term	st.c	/^} Term;$/;"	t	typeref:struct:__anon7c9e12dd0408	file:
+TermWindow	x.c	/^} TermWindow;$/;"	t	typeref:struct:__anon0b88b7ae0408	file:
+UTF_INVALID	st.c	/^#define UTF_INVALID /;"	d	file:
+UTF_SIZ	st.c	/^#define UTF_SIZ /;"	d	file:
+VERSION	config.mk	/^VERSION = 0.8.5$/;"	m
+X11INC	config.mk	/^X11INC = \/usr\/X11R6\/include$/;"	m
+X11LIB	config.mk	/^X11LIB = \/usr\/X11R6\/lib$/;"	m
+XEMBED_FOCUS_IN	x.c	/^#define XEMBED_FOCUS_IN /;"	d	file:
+XEMBED_FOCUS_OUT	x.c	/^#define XEMBED_FOCUS_OUT /;"	d	file:
+XK_ANY_MOD	x.c	/^#define XK_ANY_MOD /;"	d	file:
+XK_NO_MOD	x.c	/^#define XK_NO_MOD /;"	d	file:
+XK_SWITCH_MOD	x.c	/^#define XK_SWITCH_MOD /;"	d	file:
+XSelection	x.c	/^} XSelection;$/;"	t	typeref:struct:__anon0b88b7ae0708	file:
+XWindow	x.c	/^} XWindow;$/;"	t	typeref:struct:__anon0b88b7ae0508	file:
+__anon0b88b7ae0108	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0208	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0308	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0408	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0508	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0608	x.c	/^	struct {$/;"	s	struct:__anon0b88b7ae0508	file:
+__anon0b88b7ae0708	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0808	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0908	x.c	/^typedef struct {$/;"	s	file:
+__anon0b88b7ae0a03	x.c	/^enum {$/;"	g	file:
+__anon0b88b7ae0b08	x.c	/^typedef struct {$/;"	s	file:
+__anon7c97be200108	hb.c	/^typedef struct {$/;"	s	file:
+__anon7c9e12dd0108	st.c	/^typedef struct {$/;"	s	file:
+__anon7c9e12dd0208	st.c	/^typedef struct {$/;"	s	file:
+__anon7c9e12dd0308	st.c	/^	struct {$/;"	s	struct:__anon7c9e12dd0208	file:
+__anon7c9e12dd0408	st.c	/^typedef struct {$/;"	s	file:
+__anon7c9e12dd0508	st.c	/^typedef struct {$/;"	s	file:
+__anon7c9e12dd0608	st.c	/^typedef struct {$/;"	s	file:
+__anon7c9e12dd0708	st.c	/^	const struct { int idx; char *str; } osc_table[] = {$/;"	s	function:strhandle	file:
+__anon7c9e12e20108	st.h	/^typedef struct {$/;"	s
+__anon7c9e12e2020a	st.h	/^typedef union {$/;"	u
+a/Makefile	st-ligatures-scrollback-20210824-0.8.4.diff	/^--- a\/Makefile$/;"	m
+a/config.def.h	st-newterm-orphan-20210712-4536f46.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	st-scrollback-20210507-4536f46.diff	/^--- a\/config.def.h$/;"	m
+a/config.mk	st-ligatures-scrollback-20210824-0.8.4.diff	/^--- a\/config.mk$/;"	m
+a/st.c	st-ligatures-scrollback-20210824-0.8.4.diff	/^--- a\/st.c$/;"	m
+a/st.c	st-newterm-orphan-20210712-4536f46.diff	/^--- a\/st.c$/;"	m
+a/st.c	st-scrollback-20210507-4536f46.diff	/^--- a\/st.c$/;"	m
+a/st.h	st-ligatures-scrollback-20210824-0.8.4.diff	/^--- a\/st.h$/;"	m
+a/st.h	st-newterm-orphan-20210712-4536f46.diff	/^--- a\/st.h$/;"	m
+a/st.h	st-scrollback-20210507-4536f46.diff	/^--- a\/st.h$/;"	m
+a/win.h	st-ligatures-scrollback-20210824-0.8.4.diff	/^--- a\/win.h$/;"	m
+a/x.c	st-anysize-0.8.4.diff	/^--- a\/x.c$/;"	m
+a/x.c	st-hidecursor-0.8.3.diff	/^--- a\/x.c$/;"	m
+a/x.c	st-ligatures-scrollback-20210824-0.8.4.diff	/^--- a\/x.c$/;"	m
+all	Makefile	/^all: options st$/;"	t
+allowaltscreen	config.def.h	/^int allowaltscreen = 1;$/;"	v	typeref:typename:int
+allowaltscreen	config.h	/^int allowaltscreen = 1;$/;"	v	typeref:typename:int
+allowwindowops	config.def.h	/^int allowwindowops = 1;$/;"	v	typeref:typename:int
+allowwindowops	config.h	/^int allowwindowops = 1;$/;"	v	typeref:typename:int
+alt	st.c	/^	Line *alt;    \/* alternate screen *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:Line *	file:
+alt	st.c	/^	int alt;$/;"	m	struct:__anon7c9e12dd0208	typeref:typename:int	file:
+appcursor	x.c	/^	signed char appcursor; \/* application cursor *\/$/;"	m	struct:__anon0b88b7ae0308	typeref:typename:signed char	file:
+appkey	x.c	/^	signed char appkey;    \/* application keypad *\/$/;"	m	struct:__anon0b88b7ae0308	typeref:typename:signed char	file:
+arg	st.c	/^	int arg[ESC_ARG_SIZ];$/;"	m	struct:__anon7c9e12dd0508	typeref:typename:int[]	file:
+arg	x.c	/^	const Arg arg;$/;"	m	struct:__anon0b88b7ae0108	typeref:typename:const Arg	file:
+arg	x.c	/^	const Arg arg;$/;"	m	struct:__anon0b88b7ae0208	typeref:typename:const Arg	file:
+args	st.c	/^	char *args[STR_ARG_SIZ];$/;"	m	struct:__anon7c9e12dd0608	typeref:typename:char * []	file:
+argv0	x.c	/^char *argv0;$/;"	v	typeref:typename:char *
+ascent	x.c	/^	int ascent;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:int	file:
+ascii_printable	config.def.h	/^static char ascii_printable[] =$/;"	v	typeref:typename:char[]
+ascii_printable	config.h	/^static char ascii_printable[] =$/;"	v	typeref:typename:char[]
+attr	st.c	/^	Glyph attr; \/* current char attributes *\/$/;"	m	struct:__anon7c9e12dd0108	typeref:typename:Glyph	file:
+attrs	x.c	/^	XSetWindowAttributes attrs;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:XSetWindowAttributes	file:
+b/hb.c	st-ligatures-scrollback-20210824-0.8.4.diff	/^+++ b\/hb.c$/;"	n
+b/hb.h	st-ligatures-scrollback-20210824-0.8.4.diff	/^+++ b\/hb.h$/;"	n
+badslant	x.c	/^	int badslant;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:int	file:
+badweight	x.c	/^	int badweight;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:int	file:
+base64dec	st.c	/^base64dec(const char *src)$/;"	f	typeref:typename:char *
+base64dec_getc	st.c	/^base64dec_getc(const char **src)$/;"	f	typeref:typename:char
+bellvolume	config.def.h	/^static int bellvolume = 90;$/;"	v	typeref:typename:int
+bellvolume	config.h	/^static int bellvolume = 90;$/;"	v	typeref:typename:int
+bfont	x.c	/^	Font font, bfont, ifont, ibfont;$/;"	m	struct:__anon0b88b7ae0908	typeref:typename:Font	file:
+bg	st.h	/^	uint32_t bg;      \/* background  *\/$/;"	m	struct:__anon7c9e12e20108	typeref:typename:uint32_t
+blinktimeout	config.def.h	/^static unsigned int blinktimeout = 800;$/;"	v	typeref:typename:unsigned int
+blinktimeout	config.h	/^static unsigned int blinktimeout = 800;$/;"	v	typeref:typename:unsigned int
+bmotion	x.c	/^bmotion(XEvent *e)$/;"	f	typeref:typename:void
+borderpx	config.def.h	/^static int borderpx = 0;$/;"	v	typeref:typename:int
+borderpx	config.h	/^static int borderpx = 0;$/;"	v	typeref:typename:int
+bot	st.c	/^	int bot;      \/* bottom scroll limit *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+bpointer	x.c	/^	Cursor vpointer, bpointer; \/* visible and hidden pointers *\/$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Cursor	file:
+bpress	x.c	/^bpress(XEvent *e)$/;"	f	typeref:typename:void
+brelease	x.c	/^brelease(XEvent *e)$/;"	f	typeref:typename:void
+buf	st.c	/^	char *buf;             \/* allocated raw string *\/$/;"	m	struct:__anon7c9e12dd0608	typeref:typename:char *	file:
+buf	st.c	/^	char buf[ESC_BUF_SIZ]; \/* raw string *\/$/;"	m	struct:__anon7c9e12dd0508	typeref:typename:char[]	file:
+buf	x.c	/^	Drawable buf;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Drawable	file:
+button	x.c	/^	uint button;$/;"	m	struct:__anon0b88b7ae0208	typeref:typename:uint	file:
+buttonmask	x.c	/^buttonmask(uint button)$/;"	f	typeref:typename:uint
+buttons	x.c	/^static uint buttons; \/* bit field of pressed buttons *\/$/;"	v	typeref:typename:uint	file:
+c	st.c	/^	TCursor c;    \/* cursor *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:TCursor	file:
+ch	x.c	/^	int ch; \/* char height *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+charset	st.c	/^	int charset;  \/* current charset *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+charset	st.c	/^enum charset {$/;"	g	file:
+chscale	config.def.h	/^static float chscale = 1.0;$/;"	v	typeref:typename:float
+chscale	config.h	/^static float chscale = 1.0;$/;"	v	typeref:typename:float
+clean	Makefile	/^clean:$/;"	t
+clipboard	x.c	/^	char *primary, *clipboard;$/;"	m	struct:__anon0b88b7ae0708	typeref:typename:char *	file:
+clipcopy	x.c	/^clipcopy(const Arg *dummy)$/;"	f	typeref:typename:void
+clippaste	x.c	/^clippaste(const Arg *dummy)$/;"	f	typeref:typename:void
+cmap	x.c	/^	Colormap cmap;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Colormap	file:
+cmdfd	st.c	/^static int cmdfd;$/;"	v	typeref:typename:int	file:
+cmessage	x.c	/^cmessage(XEvent *e)$/;"	f	typeref:typename:void
+col	st.c	/^	int col;      \/* nb col *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+col	x.c	/^	Color *col;$/;"	m	struct:__anon0b88b7ae0908	typeref:typename:Color *	file:
+collen	x.c	/^	size_t collen;$/;"	m	struct:__anon0b88b7ae0908	typeref:typename:size_t	file:
+colorname	config.def.h	/^static const char *colorname[] = {$/;"	v	typeref:typename:const char * []
+colorname	config.h	/^static const char *colorname[] = {$/;"	v	typeref:typename:const char * []
+cols	config.def.h	/^static unsigned int cols = 80;$/;"	v	typeref:typename:unsigned int
+cols	config.h	/^static unsigned int cols = 80;$/;"	v	typeref:typename:unsigned int
+config.h	Makefile	/^config.h:$/;"	t
+cresize	x.c	/^cresize(int width, int height)$/;"	f	typeref:typename:void
+csidump	st.c	/^csidump(void)$/;"	f	typeref:typename:void
+csiescseq	st.c	/^static CSIEscape csiescseq;$/;"	v	typeref:typename:CSIEscape	file:
+csihandle	st.c	/^csihandle(void)$/;"	f	typeref:typename:void
+csiparse	st.c	/^csiparse(void)$/;"	f	typeref:typename:void
+csireset	st.c	/^csireset(void)$/;"	f	typeref:typename:void
+cursor	x.c	/^	int cursor; \/* cursor style *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+cursor_movement	st.c	/^enum cursor_movement {$/;"	g	file:
+cursor_state	st.c	/^enum cursor_state {$/;"	g	file:
+cursorshape	config.def.h	/^static unsigned int cursorshape = 2;$/;"	v	typeref:typename:unsigned int
+cursorshape	config.h	/^static unsigned int cursorshape = 2;$/;"	v	typeref:typename:unsigned int
+cursorthickness	config.def.h	/^static unsigned int cursorthickness = 2;$/;"	v	typeref:typename:unsigned int
+cursorthickness	config.h	/^static unsigned int cursorthickness = 2;$/;"	v	typeref:typename:unsigned int
+cw	x.c	/^	int cw; \/* char width  *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+cwscale	config.def.h	/^static float cwscale = 1.0;$/;"	v	typeref:typename:float
+cwscale	config.h	/^static float cwscale = 1.0;$/;"	v	typeref:typename:float
+dc	x.c	/^static DC dc;$/;"	v	typeref:typename:DC	file:
+defaultattr	config.def.h	/^static unsigned int defaultattr = 11;$/;"	v	typeref:typename:unsigned int
+defaultattr	config.h	/^static unsigned int defaultattr = 11;$/;"	v	typeref:typename:unsigned int
+defaultbg	config.def.h	/^unsigned int defaultbg = 257;$/;"	v	typeref:typename:unsigned int
+defaultbg	config.h	/^unsigned int defaultbg = 257;$/;"	v	typeref:typename:unsigned int
+defaultcs	config.def.h	/^unsigned int defaultcs = 258;$/;"	v	typeref:typename:unsigned int
+defaultcs	config.h	/^unsigned int defaultcs = 258;$/;"	v	typeref:typename:unsigned int
+defaultfg	config.def.h	/^unsigned int defaultfg = 256;$/;"	v	typeref:typename:unsigned int
+defaultfg	config.h	/^unsigned int defaultfg = 256;$/;"	v	typeref:typename:unsigned int
+defaultfontsize	x.c	/^static double defaultfontsize = 0;$/;"	v	typeref:typename:double	file:
+defaultrcs	config.def.h	/^static unsigned int defaultrcs = 258;$/;"	v	typeref:typename:unsigned int
+defaultrcs	config.h	/^static unsigned int defaultrcs = 258;$/;"	v	typeref:typename:unsigned int
+descent	x.c	/^	int descent;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:int	file:
+die	st.c	/^die(const char *errstr, ...)$/;"	f	typeref:typename:void
+dirty	st.c	/^	int *dirty;   \/* dirtyness of lines *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int *	file:
+dist	Makefile	/^dist: clean$/;"	t
+doubleclicktimeout	config.def.h	/^static unsigned int doubleclicktimeout = 300;$/;"	v	typeref:typename:unsigned int
+doubleclicktimeout	config.h	/^static unsigned int doubleclicktimeout = 300;$/;"	v	typeref:typename:unsigned int
+dpy	x.c	/^	Display *dpy;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Display *	file:
+draw	st.c	/^draw(void)$/;"	f	typeref:typename:void
+draw	x.c	/^	Draw draw;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Draw	file:
+drawregion	st.c	/^drawregion(int x1, int y1, int x2, int y2)$/;"	f	typeref:typename:void
+esc	st.c	/^	int esc;      \/* escape state flags *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+escape_state	st.c	/^enum escape_state {$/;"	g	file:
+eschandle	st.c	/^eschandle(uchar ascii)$/;"	f	typeref:typename:int
+evcol	x.c	/^evcol(XEvent *e)$/;"	f	typeref:typename:int
+evrow	x.c	/^evrow(XEvent *e)$/;"	f	typeref:typename:int
+execsh	st.c	/^execsh(char *cmd, char **args)$/;"	f	typeref:typename:void
+expose	x.c	/^expose(XEvent *ev)$/;"	f	typeref:typename:void
+f	st.h	/^	float f;$/;"	m	union:__anon7c9e12e2020a	typeref:typename:float
+features	hb.c	/^hb_feature_t features[] = { 0 };$/;"	v	typeref:typename:hb_feature_t[]
+fg	st.h	/^	uint32_t fg;      \/* foreground  *\/$/;"	m	struct:__anon7c9e12e20108	typeref:typename:uint32_t
+flags	x.c	/^	int flags;$/;"	m	struct:__anon0b88b7ae0b08	typeref:typename:int	file:
+focus	x.c	/^focus(XEvent *ev)$/;"	f	typeref:typename:void
+font	config.def.h	/^static char *font = "Fira Code Nerd Font:style=Medium:pixelsize=23:antialias=true:autohint=true"/;"	v	typeref:typename:char *
+font	config.h	/^static char *font = "Fira Code Nerd Font:style=Medium:pixelsize=23:antialias=true:autohint=true"/;"	v	typeref:typename:char *
+font	hb.c	/^	hb_font_t *font;$/;"	m	struct:__anon7c97be200108	typeref:typename:hb_font_t *	file:
+font	x.c	/^	Font font, bfont, ifont, ibfont;$/;"	m	struct:__anon0b88b7ae0908	typeref:typename:Font	file:
+font	x.c	/^	XftFont *font;$/;"	m	struct:__anon0b88b7ae0b08	typeref:typename:XftFont *	file:
+forcemousemod	config.def.h	/^static uint forcemousemod = ShiftMask;$/;"	v	typeref:typename:uint
+forcemousemod	config.h	/^static uint forcemousemod = ShiftMask;$/;"	v	typeref:typename:uint
+frc	x.c	/^static Fontcache *frc = NULL;$/;"	v	typeref:typename:Fontcache *	file:
+frccap	x.c	/^static int frccap = 0;$/;"	v	typeref:typename:int	file:
+frclen	x.c	/^static int frclen = 0;$/;"	v	typeref:typename:int	file:
+func	x.c	/^	void (*func)(const Arg *);$/;"	m	struct:__anon0b88b7ae0108	typeref:typename:void (*)(const Arg *)	file:
+func	x.c	/^	void (*func)(const Arg *);$/;"	m	struct:__anon0b88b7ae0208	typeref:typename:void (*)(const Arg *)	file:
+gc	x.c	/^	GC gc;$/;"	m	struct:__anon0b88b7ae0908	typeref:typename:GC	file:
+getcwd_by_pid	st.c	/^static char *getcwd_by_pid(pid_t pid) {$/;"	f	typeref:typename:char *	file:
+getsel	st.c	/^getsel(void)$/;"	f	typeref:typename:char *
+glyph_attribute	st.h	/^enum glyph_attribute {$/;"	g
+gm	x.c	/^	int gm; \/* geometry mask *\/$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:int	file:
+h	x.c	/^	int w, h; \/* window width and height *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+handler	x.c	/^static void (*handler[LASTEvent])(XEvent *) = {$/;"	v	typeref:typename:void (* [LASTEvent])(XEvent *)	file:
+hb.o	Makefile	/^hb.o: st.h$/;"	t
+hbfindfont	hb.c	/^hbfindfont(XftFont *match)$/;"	f	typeref:typename:hb_font_t *
+hbfontcache	hb.c	/^static HbFontMatch *hbfontcache = NULL;$/;"	v	typeref:typename:HbFontMatch *	file:
+hbfontslen	hb.c	/^static int hbfontslen = 0;$/;"	v	typeref:typename:int	file:
+hborderpx	x.c	/^	int hborderpx, vborderpx;$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+hbtransform	hb.c	/^hbtransform(XftGlyphFontSpec *specs, const Glyph *glyphs, size_t len, int x, int y)$/;"	f	typeref:typename:void
+hbtransformsegment	hb.c	/^hbtransformsegment(XftFont *xfont, const Glyph *string, hb_codepoint_t *codepoints, int start, i/;"	f	typeref:typename:void
+hbunloadfonts	hb.c	/^hbunloadfonts()$/;"	f	typeref:typename:void
+height	x.c	/^	int height;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:int	file:
+hist	st.c	/^	Line hist[HISTSIZE]; \/* history buffer *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:Line[]	file:
+histi	st.c	/^	int histi;    \/* history index *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+i	st.h	/^	int i;$/;"	m	union:__anon7c9e12e2020a	typeref:typename:int
+ibfont	x.c	/^	Font font, bfont, ifont, ibfont;$/;"	m	struct:__anon0b88b7ae0908	typeref:typename:Font	file:
+icharset	st.c	/^	int icharset; \/* selected charset for sequence *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+idx	st.c	/^	const struct { int idx; char *str; } osc_table[] = {$/;"	m	struct:strhandle::__anon7c9e12dd0708	typeref:typename:int	file:
+ifont	x.c	/^	Font font, bfont, ifont, ibfont;$/;"	m	struct:__anon0b88b7ae0908	typeref:typename:Font	file:
+ignoremod	config.def.h	/^static uint ignoremod = Mod2Mask|XK_SWITCH_MOD;$/;"	v	typeref:typename:uint
+ignoremod	config.h	/^static uint ignoremod = Mod2Mask|XK_SWITCH_MOD;$/;"	v	typeref:typename:uint
+ime	x.c	/^	} ime;$/;"	m	struct:__anon0b88b7ae0508	typeref:struct:__anon0b88b7ae0508::__anon0b88b7ae0608	file:
+install	Makefile	/^install: st$/;"	t
+iofd	st.c	/^static int iofd = 1;$/;"	v	typeref:typename:int	file:
+isfixed	x.c	/^	int isfixed; \/* is fixed geometry? *\/$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:int	file:
+k	x.c	/^	KeySym k;$/;"	m	struct:__anon0b88b7ae0308	typeref:typename:KeySym	file:
+key	config.def.h	/^static Key key[] = {$/;"	v	typeref:typename:Key[]
+key	config.h	/^static Key key[] = {$/;"	v	typeref:typename:Key[]
+keysym	x.c	/^	KeySym keysym;$/;"	m	struct:__anon0b88b7ae0108	typeref:typename:KeySym	file:
+kmap	x.c	/^kmap(KeySym k, uint state)$/;"	f	typeref:typename:char *
+kpress	x.c	/^kpress(XEvent *ev)$/;"	f	typeref:typename:void
+kscrolldown	st.c	/^kscrolldown(const Arg* a)$/;"	f	typeref:typename:void
+kscrollup	st.c	/^kscrollup(const Arg* a)$/;"	f	typeref:typename:void
+l	x.c	/^	int l, t; \/* left and top offset *\/$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:int	file:
+lastc	st.c	/^	Rune lastc;   \/* last printed char outside of sequence, 0 if control *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:Rune	file:
+lbearing	x.c	/^	short lbearing;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:short	file:
+len	st.c	/^	size_t len;            \/* raw string length *\/$/;"	m	struct:__anon7c9e12dd0508	typeref:typename:size_t	file:
+len	st.c	/^	size_t len;            \/* raw string length *\/$/;"	m	struct:__anon7c9e12dd0608	typeref:typename:size_t	file:
+line	st.c	/^	Line *line;   \/* screen *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:Line *	file:
+main	x.c	/^main(int argc, char *argv[])$/;"	f	typeref:typename:int
+mappedkeys	config.def.h	/^static KeySym mappedkeys[] = { -1 };$/;"	v	typeref:typename:KeySym[]
+mappedkeys	config.h	/^static KeySym mappedkeys[] = { -1 };$/;"	v	typeref:typename:KeySym[]
+mask	x.c	/^	uint mask;$/;"	m	struct:__anon0b88b7ae0308	typeref:typename:uint	file:
+match	hb.c	/^	XftFont *match;$/;"	m	struct:__anon7c97be200108	typeref:typename:XftFont *	file:
+match	x.c	/^	XftFont *match;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:XftFont *	file:
+match	x.c	/^match(uint mask, uint state)$/;"	f	typeref:typename:int
+maxlatency	config.def.h	/^static double maxlatency = 33;$/;"	v	typeref:typename:double
+maxlatency	config.h	/^static double maxlatency = 33;$/;"	v	typeref:typename:double
+minlatency	config.def.h	/^static double minlatency = 8;$/;"	v	typeref:typename:double
+minlatency	config.h	/^static double minlatency = 8;$/;"	v	typeref:typename:double
+mod	x.c	/^	uint mod;$/;"	m	struct:__anon0b88b7ae0108	typeref:typename:uint	file:
+mod	x.c	/^	uint mod;$/;"	m	struct:__anon0b88b7ae0208	typeref:typename:uint	file:
+mode	st.c	/^	char mode[2];$/;"	m	struct:__anon7c9e12dd0508	typeref:typename:char[2]	file:
+mode	st.c	/^	int mode;     \/* terminal mode flags *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+mode	st.c	/^	int mode;$/;"	m	struct:__anon7c9e12dd0208	typeref:typename:int	file:
+mode	st.h	/^	ushort mode;      \/* attribute flags *\/$/;"	m	struct:__anon7c9e12e20108	typeref:typename:ushort
+mode	x.c	/^	int mode; \/* window state\/mode flags *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+mouseaction	x.c	/^mouseaction(XEvent *e, uint release)$/;"	f	typeref:typename:int
+mousebg	config.def.h	/^static unsigned int mousebg = 0;$/;"	v	typeref:typename:unsigned int
+mousebg	config.h	/^static unsigned int mousebg = 0;$/;"	v	typeref:typename:unsigned int
+mousefg	config.def.h	/^static unsigned int mousefg = 7;$/;"	v	typeref:typename:unsigned int
+mousefg	config.h	/^static unsigned int mousefg = 7;$/;"	v	typeref:typename:unsigned int
+mousereport	x.c	/^mousereport(XEvent *e)$/;"	f	typeref:typename:void
+mousesel	x.c	/^mousesel(XEvent *e, int done)$/;"	f	typeref:typename:void
+mouseshape	config.def.h	/^static unsigned int mouseshape = XC_xterm;$/;"	v	typeref:typename:unsigned int
+mouseshape	config.h	/^static unsigned int mouseshape = XC_xterm;$/;"	v	typeref:typename:unsigned int
+mshortcuts	config.def.h	/^static MouseShortcut mshortcuts[] = {$/;"	v	typeref:typename:MouseShortcut[]
+mshortcuts	config.h	/^static MouseShortcut mshortcuts[] = {$/;"	v	typeref:typename:MouseShortcut[]
+narg	st.c	/^	int narg;              \/* nb of args *\/$/;"	m	struct:__anon7c9e12dd0508	typeref:typename:int	file:
+narg	st.c	/^	int narg;              \/* nb of args *\/$/;"	m	struct:__anon7c9e12dd0608	typeref:typename:int	file:
+nb	st.c	/^	} nb, ne, ob, oe;$/;"	m	struct:__anon7c9e12dd0208	typeref:struct:__anon7c9e12dd0208::__anon7c9e12dd0308	file:
+ne	st.c	/^	} nb, ne, ob, oe;$/;"	m	struct:__anon7c9e12dd0208	typeref:struct:__anon7c9e12dd0208::__anon7c9e12dd0308	file:
+netwmiconname	x.c	/^	Atom xembed, wmdeletewin, netwmname, netwmiconname, netwmpid;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Atom	file:
+netwmname	x.c	/^	Atom xembed, wmdeletewin, netwmname, netwmiconname, netwmpid;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Atom	file:
+netwmpid	x.c	/^	Atom xembed, wmdeletewin, netwmname, netwmiconname, netwmpid;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Atom	file:
+newterm	st.c	/^newterm(const Arg* a)$/;"	f	typeref:typename:void
+numlock	x.c	/^numlock(const Arg *dummy)$/;"	f	typeref:typename:void
+ob	st.c	/^	} nb, ne, ob, oe;$/;"	m	struct:__anon7c9e12dd0208	typeref:struct:__anon7c9e12dd0208::__anon7c9e12dd0308	file:
+ocx	st.c	/^	int ocx;      \/* old cursor col *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+ocy	st.c	/^	int ocy;      \/* old cursor row *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+oe	st.c	/^	} nb, ne, ob, oe;$/;"	m	struct:__anon7c9e12dd0208	typeref:struct:__anon7c9e12dd0208::__anon7c9e12dd0308	file:
+opt_class	x.c	/^static char *opt_class = NULL;$/;"	v	typeref:typename:char *	file:
+opt_cmd	x.c	/^static char **opt_cmd  = NULL;$/;"	v	typeref:typename:char **	file:
+opt_embed	x.c	/^static char *opt_embed = NULL;$/;"	v	typeref:typename:char *	file:
+opt_font	x.c	/^static char *opt_font  = NULL;$/;"	v	typeref:typename:char *	file:
+opt_io	x.c	/^static char *opt_io    = NULL;$/;"	v	typeref:typename:char *	file:
+opt_line	x.c	/^static char *opt_line  = NULL;$/;"	v	typeref:typename:char *	file:
+opt_name	x.c	/^static char *opt_name  = NULL;$/;"	v	typeref:typename:char *	file:
+opt_title	x.c	/^static char *opt_title = NULL;$/;"	v	typeref:typename:char *	file:
+options	Makefile	/^options:$/;"	t
+osc_color_response	st.c	/^osc_color_response(int num, int index, int is_osc4)$/;"	f	typeref:typename:void
+pattern	x.c	/^	FcPattern *pattern;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:FcPattern *	file:
+pid	st.c	/^static pid_t pid;$/;"	v	typeref:typename:pid_t	file:
+pointerisvisible	x.c	/^	int pointerisvisible;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:int	file:
+primary	x.c	/^	char *primary, *clipboard;$/;"	m	struct:__anon0b88b7ae0708	typeref:typename:char *	file:
+printscreen	st.c	/^printscreen(const Arg *arg)$/;"	f	typeref:typename:void
+printsel	st.c	/^printsel(const Arg *arg)$/;"	f	typeref:typename:void
+priv	st.c	/^	char priv;$/;"	m	struct:__anon7c9e12dd0508	typeref:typename:char	file:
+propnotify	x.c	/^propnotify(XEvent *e)$/;"	f	typeref:typename:void
+rbearing	x.c	/^	short rbearing;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:short	file:
+redraw	st.c	/^redraw(void)$/;"	f	typeref:typename:void
+release	x.c	/^	uint  release;$/;"	m	struct:__anon0b88b7ae0208	typeref:typename:uint	file:
+resettitle	st.c	/^resettitle(void)$/;"	f	typeref:typename:void
+resize	x.c	/^resize(XEvent *e)$/;"	f	typeref:typename:void
+row	st.c	/^	int row;      \/* nb row *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+rows	config.def.h	/^static unsigned int rows = 24;$/;"	v	typeref:typename:unsigned int
+rows	config.h	/^static unsigned int rows = 24;$/;"	v	typeref:typename:unsigned int
+run	x.c	/^run(void)$/;"	f	typeref:typename:void
+s	st.h	/^	const char *s;$/;"	m	union:__anon7c9e12e2020a	typeref:typename:const char *
+s	x.c	/^	char *s;$/;"	m	struct:__anon0b88b7ae0308	typeref:typename:char *	file:
+scr	st.c	/^	int scr;      \/* scroll back *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+scr	x.c	/^	int scr;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:int	file:
+scroll	config.def.h	/^char *scroll = NULL;$/;"	v	typeref:typename:char *
+scroll	config.h	/^char *scroll = NULL;$/;"	v	typeref:typename:char *
+sel	st.c	/^static Selection sel;$/;"	v	typeref:typename:Selection	file:
+selclear	st.c	/^selclear(void)$/;"	f	typeref:typename:void
+selclear_	x.c	/^selclear_(XEvent *e)$/;"	f	typeref:typename:void
+selected	st.c	/^selected(int x, int y)$/;"	f	typeref:typename:int
+selection_mode	st.h	/^enum selection_mode {$/;"	g
+selection_snap	st.h	/^enum selection_snap {$/;"	g
+selection_type	st.h	/^enum selection_type {$/;"	g
+selextend	st.c	/^selextend(int col, int row, int type, int done)$/;"	f	typeref:typename:void
+selinit	st.c	/^selinit(void)$/;"	f	typeref:typename:void
+selmasks	config.def.h	/^static uint selmasks[] = {$/;"	v	typeref:typename:uint[]
+selmasks	config.h	/^static uint selmasks[] = {$/;"	v	typeref:typename:uint[]
+selnormalize	st.c	/^selnormalize(void)$/;"	f	typeref:typename:void
+selnotify	x.c	/^selnotify(XEvent *e)$/;"	f	typeref:typename:void
+selpaste	x.c	/^selpaste(const Arg *dummy)$/;"	f	typeref:typename:void
+selrequest	x.c	/^selrequest(XEvent *e)$/;"	f	typeref:typename:void
+selscroll	st.c	/^selscroll(int orig, int n)$/;"	f	typeref:typename:void
+selsnap	st.c	/^selsnap(int *x, int *y, int direction)$/;"	f	typeref:typename:void
+selstart	st.c	/^selstart(int col, int row, int snap)$/;"	f	typeref:typename:void
+sendbreak	st.c	/^sendbreak(const Arg *arg)$/;"	f	typeref:typename:void
+set	x.c	/^	FcFontSet *set;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:FcFontSet *	file:
+setsel	x.c	/^setsel(char *str, Time t)$/;"	f	typeref:typename:void
+shell	config.def.h	/^static char *shell = "\/bin\/sh";$/;"	v	typeref:typename:char *
+shell	config.h	/^static char *shell = "\/bin\/sh";$/;"	v	typeref:typename:char *
+shortcuts	config.def.h	/^static Shortcut shortcuts[] = {$/;"	v	typeref:typename:Shortcut[]
+shortcuts	config.h	/^static Shortcut shortcuts[] = {$/;"	v	typeref:typename:Shortcut[]
+sigchld	st.c	/^sigchld(int a)$/;"	f	typeref:typename:void
+sixd_to_16bit	x.c	/^sixd_to_16bit(int x)$/;"	f	typeref:typename:ushort
+siz	st.c	/^	size_t siz;            \/* allocation size *\/$/;"	m	struct:__anon7c9e12dd0608	typeref:typename:size_t	file:
+snap	st.c	/^	int snap;$/;"	m	struct:__anon7c9e12dd0208	typeref:typename:int	file:
+specbuf	x.c	/^	GlyphFontSpec *specbuf; \/* font spec buffer used for rendering *\/$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:GlyphFontSpec *	file:
+spot	x.c	/^		XPoint spot;$/;"	m	struct:__anon0b88b7ae0508::__anon0b88b7ae0608	typeref:typename:XPoint	file:
+spotlist	x.c	/^		XVaNestedList spotlist;$/;"	m	struct:__anon0b88b7ae0508::__anon0b88b7ae0608	typeref:typename:XVaNestedList	file:
+st	Makefile	/^st: $(OBJ)$/;"	t
+st.o	Makefile	/^st.o: config.h st.h win.h$/;"	t
+state	st.c	/^	char state;$/;"	m	struct:__anon7c9e12dd0108	typeref:typename:char	file:
+str	st.c	/^	const struct { int idx; char *str; } osc_table[] = {$/;"	m	struct:strhandle::__anon7c9e12dd0708	typeref:typename:char *	file:
+strdump	st.c	/^strdump(void)$/;"	f	typeref:typename:void
+strescseq	st.c	/^static STREscape strescseq;$/;"	v	typeref:typename:STREscape	file:
+strhandle	st.c	/^strhandle(void)$/;"	f	typeref:typename:void
+strparse	st.c	/^strparse(void)$/;"	f	typeref:typename:void
+strreset	st.c	/^strreset(void)$/;"	f	typeref:typename:void
+stty	st.c	/^stty(char **args)$/;"	f	typeref:typename:void
+stty_args	config.def.h	/^char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";$/;"	v	typeref:typename:char *
+stty_args	config.h	/^char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";$/;"	v	typeref:typename:char *
+t	x.c	/^	int l, t; \/* left and top offset *\/$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:int	file:
+tabs	st.c	/^	int *tabs;$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int *	file:
+tabspaces	config.def.h	/^unsigned int tabspaces = 8;$/;"	v	typeref:typename:unsigned int
+tabspaces	config.h	/^unsigned int tabspaces = 8;$/;"	v	typeref:typename:unsigned int
+tattrset	st.c	/^tattrset(int attr)$/;"	f	typeref:typename:int
+tclearregion	st.c	/^tclearregion(int x1, int y1, int x2, int y2)$/;"	f	typeref:typename:void
+tclick1	x.c	/^	struct timespec tclick1;$/;"	m	struct:__anon0b88b7ae0708	typeref:struct:timespec	file:
+tclick2	x.c	/^	struct timespec tclick2;$/;"	m	struct:__anon0b88b7ae0708	typeref:struct:timespec	file:
+tcontrolcode	st.c	/^tcontrolcode(uchar ascii)$/;"	f	typeref:typename:void
+tcursor	st.c	/^tcursor(int mode)$/;"	f	typeref:typename:void
+tdectest	st.c	/^tdectest(char c)$/;"	f	typeref:typename:void
+tdefcolor	st.c	/^tdefcolor(const int *attr, int *npar, int l)$/;"	f	typeref:typename:int32_t
+tdeftran	st.c	/^tdeftran(char ascii)$/;"	f	typeref:typename:void
+tdefutf8	st.c	/^tdefutf8(char ascii)$/;"	f	typeref:typename:void
+tdeletechar	st.c	/^tdeletechar(int n)$/;"	f	typeref:typename:void
+tdeleteline	st.c	/^tdeleteline(int n)$/;"	f	typeref:typename:void
+tdump	st.c	/^tdump(void)$/;"	f	typeref:typename:void
+tdumpline	st.c	/^tdumpline(int n)$/;"	f	typeref:typename:void
+tdumpsel	st.c	/^tdumpsel(void)$/;"	f	typeref:typename:void
+term	st.c	/^static Term term;$/;"	v	typeref:typename:Term	file:
+term_mode	st.c	/^enum term_mode {$/;"	g	file:
+termname	config.def.h	/^char *termname = "st-256color";$/;"	v	typeref:typename:char *
+termname	config.h	/^char *termname = "st-256color";$/;"	v	typeref:typename:char *
+tfulldirt	st.c	/^tfulldirt(void)$/;"	f	typeref:typename:void
+th	x.c	/^	int tw, th; \/* tty width and height *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+tinsertblank	st.c	/^tinsertblank(int n)$/;"	f	typeref:typename:void
+tinsertblankline	st.c	/^tinsertblankline(int n)$/;"	f	typeref:typename:void
+tlinelen	st.c	/^tlinelen(int y)$/;"	f	typeref:typename:int
+tmoveato	st.c	/^tmoveato(int x, int y)$/;"	f	typeref:typename:void
+tmoveto	st.c	/^tmoveto(int x, int y)$/;"	f	typeref:typename:void
+tnew	st.c	/^tnew(int col, int row)$/;"	f	typeref:typename:void
+tnewline	st.c	/^tnewline(int first_col)$/;"	f	typeref:typename:void
+toggleprinter	st.c	/^toggleprinter(const Arg *arg)$/;"	f	typeref:typename:void
+top	st.c	/^	int top;      \/* top    scroll limit *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:int	file:
+tprinter	st.c	/^tprinter(char *s, size_t len)$/;"	f	typeref:typename:void
+tputc	st.c	/^tputc(Rune u)$/;"	f	typeref:typename:void
+tputtab	st.c	/^tputtab(int n)$/;"	f	typeref:typename:void
+trantbl	st.c	/^	char trantbl[4]; \/* charset table translation *\/$/;"	m	struct:__anon7c9e12dd0408	typeref:typename:char[4]	file:
+treset	st.c	/^treset(void)$/;"	f	typeref:typename:void
+tresize	st.c	/^tresize(int col, int row)$/;"	f	typeref:typename:void
+tripleclicktimeout	config.def.h	/^static unsigned int tripleclicktimeout = 600;$/;"	v	typeref:typename:unsigned int
+tripleclicktimeout	config.h	/^static unsigned int tripleclicktimeout = 600;$/;"	v	typeref:typename:unsigned int
+tscrolldown	st.c	/^tscrolldown(int orig, int n, int copyhist)$/;"	f	typeref:typename:void
+tscrollup	st.c	/^tscrollup(int orig, int n, int copyhist)$/;"	f	typeref:typename:void
+tsetattr	st.c	/^tsetattr(const int *attr, int l)$/;"	f	typeref:typename:void
+tsetchar	st.c	/^tsetchar(Rune u, const Glyph *attr, int x, int y)$/;"	f	typeref:typename:void
+tsetdirt	st.c	/^tsetdirt(int top, int bot)$/;"	f	typeref:typename:void
+tsetdirtattr	st.c	/^tsetdirtattr(int attr)$/;"	f	typeref:typename:void
+tsetmode	st.c	/^tsetmode(int priv, int set, const int *args, int narg)$/;"	f	typeref:typename:void
+tsetscroll	st.c	/^tsetscroll(int t, int b)$/;"	f	typeref:typename:void
+tstrsequence	st.c	/^tstrsequence(uchar c)$/;"	f	typeref:typename:void
+tswapscreen	st.c	/^tswapscreen(void)$/;"	f	typeref:typename:void
+ttyhangup	st.c	/^ttyhangup()$/;"	f	typeref:typename:void
+ttynew	st.c	/^ttynew(const char *line, char *cmd, const char *out, char **args)$/;"	f	typeref:typename:int
+ttyread	st.c	/^ttyread(void)$/;"	f	typeref:typename:size_t
+ttyresize	st.c	/^ttyresize(int tw, int th)$/;"	f	typeref:typename:void
+ttysend	x.c	/^ttysend(const Arg *arg)$/;"	f	typeref:typename:void
+ttywrite	st.c	/^ttywrite(const char *s, size_t n, int may_echo)$/;"	f	typeref:typename:void
+ttywriteraw	st.c	/^ttywriteraw(const char *s, size_t n)$/;"	f	typeref:typename:void
+tw	x.c	/^	int tw, th; \/* tty width and height *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+twrite	st.c	/^twrite(const char *buf, int buflen, int show_ctrl)$/;"	f	typeref:typename:int
+type	st.c	/^	char type;             \/* ESC type ... *\/$/;"	m	struct:__anon7c9e12dd0608	typeref:typename:char	file:
+type	st.c	/^	int type;$/;"	m	struct:__anon7c9e12dd0208	typeref:typename:int	file:
+u	st.h	/^	Rune u;           \/* character code *\/$/;"	m	struct:__anon7c9e12e20108	typeref:typename:Rune
+uchar	st.h	/^typedef unsigned char uchar;$/;"	t	typeref:typename:unsigned char
+ui	st.h	/^	uint ui;$/;"	m	union:__anon7c9e12e2020a	typeref:typename:uint
+uint	st.h	/^typedef unsigned int uint;$/;"	t	typeref:typename:unsigned int
+ulong	st.h	/^typedef unsigned long ulong;$/;"	t	typeref:typename:unsigned long
+unicodep	x.c	/^	Rune unicodep;$/;"	m	struct:__anon0b88b7ae0b08	typeref:typename:Rune	file:
+uninstall	Makefile	/^uninstall:$/;"	t
+unmap	x.c	/^unmap(XEvent *ev)$/;"	f	typeref:typename:void
+usage	x.c	/^usage(void)$/;"	f	typeref:typename:void
+usedfont	x.c	/^static char *usedfont = NULL;$/;"	v	typeref:typename:char *	file:
+usedfontsize	x.c	/^static double usedfontsize = 0;$/;"	v	typeref:typename:double	file:
+ushort	st.h	/^typedef unsigned short ushort;$/;"	t	typeref:typename:unsigned short
+utf8decode	st.c	/^utf8decode(const char *c, Rune *u, size_t clen)$/;"	f	typeref:typename:size_t
+utf8decodebyte	st.c	/^utf8decodebyte(char c, size_t *i)$/;"	f	typeref:typename:Rune
+utf8encode	st.c	/^utf8encode(Rune u, char *c)$/;"	f	typeref:typename:size_t
+utf8encodebyte	st.c	/^utf8encodebyte(Rune u, size_t i)$/;"	f	typeref:typename:char
+utf8validate	st.c	/^utf8validate(Rune *u, size_t i)$/;"	f	typeref:typename:size_t
+utfbyte	st.c	/^static const uchar utfbyte[UTF_SIZ + 1] = {0x80,    0, 0xC0, 0xE0, 0xF0};$/;"	v	typeref:typename:const uchar[]	file:
+utfmask	st.c	/^static const uchar utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0xE0, 0xF0, 0xF8};$/;"	v	typeref:typename:const uchar[]	file:
+utfmax	st.c	/^static const Rune utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};$/;"	v	typeref:typename:const Rune[]	file:
+utfmin	st.c	/^static const Rune utfmin[UTF_SIZ + 1] = {       0,    0,  0x80,  0x800,  0x10000};$/;"	v	typeref:typename:const Rune[]	file:
+utmp	config.def.h	/^char *utmp = NULL;$/;"	v	typeref:typename:char *
+utmp	config.h	/^char *utmp = NULL;$/;"	v	typeref:typename:char *
+v	st.h	/^	const void *v;$/;"	m	union:__anon7c9e12e2020a	typeref:typename:const void *
+vborderpx	x.c	/^	int hborderpx, vborderpx;$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+vis	x.c	/^	Visual *vis;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Visual *	file:
+visibility	x.c	/^visibility(XEvent *ev)$/;"	f	typeref:typename:void
+vpointer	x.c	/^	Cursor vpointer, bpointer; \/* visible and hidden pointers *\/$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Cursor	file:
+vtiden	config.def.h	/^char *vtiden = "\\033[?6c";$/;"	v	typeref:typename:char *
+vtiden	config.h	/^char *vtiden = "\\033[?6c";$/;"	v	typeref:typename:char *
+w	x.c	/^	int w, h; \/* window width and height *\/$/;"	m	struct:__anon0b88b7ae0408	typeref:typename:int	file:
+width	x.c	/^	int width;$/;"	m	struct:__anon0b88b7ae0808	typeref:typename:int	file:
+win	x.c	/^	Window win;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Window	file:
+win	x.c	/^static TermWindow win;$/;"	v	typeref:typename:TermWindow	file:
+win_mode	win.h	/^enum win_mode {$/;"	g
+wmdeletewin	x.c	/^	Atom xembed, wmdeletewin, netwmname, netwmiconname, netwmpid;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Atom	file:
+worddelimiters	config.def.h	/^wchar_t *worddelimiters = L" ";$/;"	v	typeref:typename:wchar_t *
+worddelimiters	config.h	/^wchar_t *worddelimiters = L" ";$/;"	v	typeref:typename:wchar_t *
+x	st.c	/^		int x, y;$/;"	m	struct:__anon7c9e12dd0208::__anon7c9e12dd0308	typeref:typename:int	file:
+x	st.c	/^	int x;$/;"	m	struct:__anon7c9e12dd0108	typeref:typename:int	file:
+x.o	Makefile	/^x.o: arg.h config.h st.h win.h hb.h$/;"	t
+xbell	x.c	/^xbell(void)$/;"	f	typeref:typename:void
+xclear	x.c	/^xclear(int x1, int y1, int x2, int y2)$/;"	f	typeref:typename:void
+xclipcopy	x.c	/^xclipcopy(void)$/;"	f	typeref:typename:void
+xdrawcursor	x.c	/^xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og, Line line, int len)$/;"	f	typeref:typename:void
+xdrawglyph	x.c	/^xdrawglyph(Glyph g, int x, int y)$/;"	f	typeref:typename:void
+xdrawglyphfontspecs	x.c	/^xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, int y)$/;"	f	typeref:typename:void
+xdrawline	x.c	/^xdrawline(Line line, int x1, int y1, int x2)$/;"	f	typeref:typename:void
+xembed	x.c	/^	Atom xembed, wmdeletewin, netwmname, netwmiconname, netwmpid;$/;"	m	struct:__anon0b88b7ae0508	typeref:typename:Atom	file:
+xfinishdraw	x.c	/^xfinishdraw(void)$/;"	f	typeref:typename:void
+xgeommasktogravity	x.c	/^xgeommasktogravity(int mask)$/;"	f	typeref:typename:int
+xgetcolor	x.c	/^xgetcolor(int x, unsigned char *r, unsigned char *g, unsigned char *b)$/;"	f	typeref:typename:int
+xhints	x.c	/^xhints(void)$/;"	f	typeref:typename:void
+xic	x.c	/^		XIC xic;$/;"	m	struct:__anon0b88b7ae0508::__anon0b88b7ae0608	typeref:typename:XIC	file:
+xicdestroy	x.c	/^xicdestroy(XIC xim, XPointer client, XPointer call)$/;"	f	typeref:typename:int
+xim	x.c	/^		XIM xim;$/;"	m	struct:__anon0b88b7ae0508::__anon0b88b7ae0608	typeref:typename:XIM	file:
+ximdestroy	x.c	/^ximdestroy(XIM xim, XPointer client, XPointer call)$/;"	f	typeref:typename:void
+ximinstantiate	x.c	/^ximinstantiate(Display *dpy, XPointer client, XPointer call)$/;"	f	typeref:typename:void
+ximopen	x.c	/^ximopen(Display *dpy)$/;"	f	typeref:typename:int
+xinit	x.c	/^xinit(int cols, int rows)$/;"	f	typeref:typename:void
+xloadcolor	x.c	/^xloadcolor(int i, const char *name, Color *ncolor)$/;"	f	typeref:typename:int
+xloadcols	x.c	/^xloadcols(void)$/;"	f	typeref:typename:void
+xloadfont	x.c	/^xloadfont(Font *f, FcPattern *pattern)$/;"	f	typeref:typename:int
+xloadfonts	x.c	/^xloadfonts(const char *fontstr, double fontsize)$/;"	f	typeref:typename:void
+xmakeglyphfontspecs	x.c	/^xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x, int y)$/;"	f	typeref:typename:int
+xmalloc	st.c	/^xmalloc(size_t len)$/;"	f	typeref:typename:void *
+xrealloc	st.c	/^xrealloc(void *p, size_t len)$/;"	f	typeref:typename:void *
+xresize	x.c	/^xresize(int col, int row)$/;"	f	typeref:typename:void
+xsel	x.c	/^static XSelection xsel;$/;"	v	typeref:typename:XSelection	file:
+xsetcolorname	x.c	/^xsetcolorname(int x, const char *name)$/;"	f	typeref:typename:int
+xsetcursor	x.c	/^xsetcursor(int cursor)$/;"	f	typeref:typename:int
+xsetenv	x.c	/^xsetenv(void)$/;"	f	typeref:typename:void
+xseticontitle	x.c	/^xseticontitle(char *p)$/;"	f	typeref:typename:void
+xsetmode	x.c	/^xsetmode(int set, unsigned int flags)$/;"	f	typeref:typename:void
+xsetpointermotion	x.c	/^xsetpointermotion(int set)$/;"	f	typeref:typename:void
+xsetsel	x.c	/^xsetsel(char *str)$/;"	f	typeref:typename:void
+xsettitle	x.c	/^xsettitle(char *p)$/;"	f	typeref:typename:void
+xseturgency	x.c	/^xseturgency(int add)$/;"	f	typeref:typename:void
+xstartdraw	x.c	/^xstartdraw(void)$/;"	f	typeref:typename:int
+xstrdup	st.c	/^xstrdup(const char *s)$/;"	f	typeref:typename:char *
+xtarget	x.c	/^	Atom xtarget;$/;"	m	struct:__anon0b88b7ae0708	typeref:typename:Atom	file:
+xunloadfont	x.c	/^xunloadfont(Font *f)$/;"	f	typeref:typename:void
+xunloadfonts	x.c	/^xunloadfonts(void)$/;"	f	typeref:typename:void
+xw	x.c	/^static XWindow xw;$/;"	v	typeref:typename:XWindow	file:
+xwrite	st.c	/^xwrite(int fd, const char *s, size_t len)$/;"	f	typeref:typename:ssize_t
+xximspot	x.c	/^xximspot(int x, int y)$/;"	f	typeref:typename:void
+y	st.c	/^		int x, y;$/;"	m	struct:__anon7c9e12dd0208::__anon7c9e12dd0308	typeref:typename:int	file:
+y	st.c	/^	int y;$/;"	m	struct:__anon7c9e12dd0108	typeref:typename:int	file:
+zoom	x.c	/^zoom(const Arg *arg)$/;"	f	typeref:typename:void
+zoomabs	x.c	/^zoomabs(const Arg *arg)$/;"	f	typeref:typename:void
+zoomreset	x.c	/^zoomreset(const Arg *arg)$/;"	f	typeref:typename:void

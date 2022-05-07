@@ -11,15 +11,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Fira Code Nerd Font:style=Medium:size=14:antialias=true:hinting=true" };
 static const char dmenufont[]       = "Fira Code Nerd Font:style=Medium:size=14";
-static const char col_gray1[]       = "#1E1F29";
-static const char col_gray2[]       = "#1E1F29";
-static const char col_gray3[]       = "#ffffff";
-static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#bd93f9";
+static const char col_def_bg[]       = "#1E1E2E";
+static const char col_sel_bg[]       = "#F5C2E7";
+static const char col_def_fg[]       = "#D9E0EE";
+static const char col_sel_fg[]       = "#1E1E2E";
+static const char col_def_bor[]      = "#1E1E2E";
+static const char col_sel_bor[]      = "#F5C2E7";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_def_fg, col_def_bg, col_def_bor },
+	[SchemeSel]  = { col_def_bg, col_sel_bg, col_sel_bor },
 };
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
 static const XPoint stickyiconbb    = {4,8};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */

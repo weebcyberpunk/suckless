@@ -9,6 +9,14 @@ static char *font = "Fira Code Nerd Font:style=Medium:pixelsize=23:antialias=tru
 static int borderpx = 0;
 
 /*
+ * background image
+ * expects farbfeld format
+ * pseudo transparency fixes coordinates to the screen origin
+ */
+static const char *bgfile = "/home/gg/.config/st.ff";
+static const int pseudotransparency = 1;
+
+/*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
  * 2: scroll and/or utmp
