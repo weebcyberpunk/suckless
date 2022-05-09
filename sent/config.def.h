@@ -2,14 +2,14 @@
 
 static char *fontfallbacks[] = {
 	"ubuntu",
-	"dejavu sans",
+	"fira code nerd font",
 };
 #define NUMFONTSCALES 42
 #define FONTSZ(x) ((int)(10.0 * powf(1.1288, (x)))) /* x in [0, NUMFONTSCALES-1] */
 
 static const char *colors[] = {
-	"#ffffff", /* foreground color */
-	"#23252E", /* background color */
+	"#D9E0EE", /* foreground color */
+	"#1E1E2E", /* background color */
 };
 
 static const float linespacing = 1.4;
