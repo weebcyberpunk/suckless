@@ -112,6 +112,7 @@ static const char *web_menu_cmd[] = { SCRIPTS_HOME"dmenu_web", NULL };
 static const char *web_search_cmd[] = { SCRIPTS_HOME"dmenu_websearch", NULL };
 static const char *ffmpegcmd[] = { SCRIPTS_HOME"dmenu-ffmpeg.sh", NULL };
 static const char *musicmenu[] = { SCRIPTS_HOME"dmenu_mpd.sh", NULL };
+static const char *monitors[] = { SCRIPTS_HOME"monitors", NULL };
 
 // change xkeymap
 static const char *changexmap[] = { SCRIPTS_HOME"changexmap.sh", NULL };
@@ -193,6 +194,7 @@ static Key keys[] = {
 
 	// etc
 	{ ControlMask|Mod1Mask,         XK_x,      spawn,          {.v = changexmap } },
+	{ ControlMask|Mod1Mask,         XK_d,      spawn,          {.v = monitors } },
 };
 
 /* button definitions */
