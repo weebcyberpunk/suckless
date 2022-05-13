@@ -1,10 +1,21 @@
 #!/usr/bin/sh
 
-cd ~/Projects
-PROJECT="$(ls | dmenu -p 'Project: ')"
+# author GG weebcyberpunk@gmail.com
+# version 0.0.0
+# since May 12, 2022
 
-if [ "$PROJECT" != "" ]
+cd ~/Projects
+PROJECT="$(echo -e "$(ls)" "\nnew" | dmenu -p 'Project: ')"
+
+if [ "$PROJECT" == "new" ]
+then
+	NEW_PROJECT="$(echo '' | dmenu -p 'Name: ')"
+	mkdir "$NEW_PROJECT"
+	cd $NEW_PROJECT
+	$TERMINAL -e $EDITOR
+
+elif [ "$PROJECT" != "" ]
 then
 	cd $PROJECT
-	st -e nvim
+	$TERMINAL -e $EDITOR
 fi
