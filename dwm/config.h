@@ -90,7 +90,7 @@ static const char *screenshot_cmd[] = { "gnome-screenshot", "-i", NULL };
 static const char *open_email_cmd[] = { TERM, "-e", "neomutt", NULL };
 static const char *open_htop_cmd[] = { TERM, "-e", "htop", NULL };
 static const char *open_fm_cmd[] = { TERM, "-e", "lf", NULL };
-static const char *sys_upgrade[] = { TERM, "-e", "yay", NULL };
+static const char *sys_upgrade[] = { SCRIPTS_HOME"upgrade", NULL };
 static const char *open_calculator[] = { "galculator", NULL };
 
 // dmenu
