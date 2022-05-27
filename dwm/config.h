@@ -72,9 +72,9 @@ static const char *termcmd[]  = { TERM, NULL };
 // custom commands
 //
 // audio
-static const char *increase_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume.sh", "--increase", NULL };
-static const char *decrease_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume.sh", "--decrease", NULL };
-static const char *toggle_mute_cmd[] = { SCRIPTS_HOME"pamixer_volume.sh", "--mute", NULL };
+static const char *increase_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume", "--increase", NULL };
+static const char *decrease_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume", "--decrease", NULL };
+static const char *toggle_mute_cmd[] = { SCRIPTS_HOME"pamixer_volume", "--mute", NULL };
 static const char *pause_cmd[] = { "mpc", "toggle", NULL };
 static const char *next_song_cmd[] = { "mpc", "next", NULL };
 static const char *previous_song_cmd[] = { "mpc", "prev", NULL };
@@ -99,12 +99,12 @@ static const char *logoutcmd[] = { SCRIPTS_HOME"dmenu_shutdown", NULL };
 static const char *projects_menu_cmd[] = { SCRIPTS_HOME"dmenu_projects", NULL };
 static const char *web_menu_cmd[] = { SCRIPTS_HOME"dmenu_web", NULL };
 static const char *web_search_cmd[] = { SCRIPTS_HOME"dmenu_websearch", NULL };
-static const char *ffmpegcmd[] = { SCRIPTS_HOME"dmenu-ffmpeg.sh", NULL };
-static const char *musicmenu[] = { SCRIPTS_HOME"dmenu_mpd.sh", NULL };
+static const char *ffmpegcmd[] = { SCRIPTS_HOME"dmenu-ffmpeg", NULL };
+static const char *musicmenu[] = { SCRIPTS_HOME"dmenu_mpd", NULL };
 static const char *monitors[] = { SCRIPTS_HOME"monitors", NULL };
 
 // change xkeymap
-static const char *changexmap[] = { SCRIPTS_HOME"changexmap.sh", NULL };
+static const char *changexmap[] = { SCRIPTS_HOME"changexmap", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
