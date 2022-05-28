@@ -3,12 +3,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const int startwithgaps	    = 1;	/* 1 means gaps are used by default */
 static const unsigned int gappx     = 22;       /* default gap between windows in pixels */
 static const unsigned int snap      = 12;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Fira Code Nerd Font:style=Medium:size=14:antialias=true:hinting=true" };
 static const char dmenufont[]       = "Fira Code Nerd Font:style=Medium:size=14";
 static const char col_def_bg[]       = "#1E1E2E";
@@ -117,8 +118,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_k,      inplacerotate,  {.i = -1} },
 	{ MODKEY|ShiftMask,             XK_h,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_l,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.02} },
+	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.02} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ ControlMask|ShiftMask,        XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_w,      killclient,     {0} },
@@ -192,7 +193,6 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
