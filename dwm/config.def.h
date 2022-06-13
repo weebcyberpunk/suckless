@@ -71,9 +71,9 @@ static const char *termcmd[]  = { TERM, NULL };
 // custom commands
 //
 // audio
-static const char *increase_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume", "--increase", NULL };
-static const char *decrease_vol_cmd[] = { SCRIPTS_HOME"pamixer_volume", "--decrease", NULL };
-static const char *toggle_mute_cmd[] = { SCRIPTS_HOME"pamixer_volume", "--mute", NULL };
+static const char *increase_vol_cmd[] = { SCRIPTS_HOME"pulsevolume", "--increase", NULL };
+static const char *decrease_vol_cmd[] = { SCRIPTS_HOME"pulsevolume", "--decrease", NULL };
+static const char *toggle_mute_cmd[] = { SCRIPTS_HOME"pulsevolume", "--mute", NULL };
 static const char *pause_cmd[] = { "mpc", "toggle", NULL };
 static const char *next_song_cmd[] = { "mpc", "next", NULL };
 static const char *previous_song_cmd[] = { "mpc", "prev", NULL };
