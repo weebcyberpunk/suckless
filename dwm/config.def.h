@@ -12,16 +12,20 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Fira Code Nerd Font:style=Medium:size=14:antialias=true:hinting=true" };
 static const char dmenufont[]       = "Fira Code Nerd Font:style=Medium:size=14";
-static const char col_def_bg[]       = "#1E1E2E";
-static const char col_sel_bg[]       = "#F5C2E7";
-static const char col_def_fg[]       = "#D9E0EE";
-static const char col_sel_fg[]       = "#1E1E2E";
-static const char col_def_bor[]      = "#1E1E2E";
-static const char col_sel_bor[]      = "#F5C2E7";
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_def_fg, col_def_bg, col_def_bor },
-	[SchemeSel]  = { col_def_bg, col_sel_bg, col_sel_bor },
+static const char background[]      = "#1E1E2E";
+static const char foreground[]      = "#D9E0EE";
+static const char magenta[]         = "#F5C2E7";
+static const char cyan[]            = "#96CDFB";
+static const char yellow[]          = "#FAE3B0";
+static const char red[]             = "#F28FAD";
+
+static const char *colors[][8]      = {
+	/*   fg         bg         border   */
+	{ foreground, background, background },
+	{ background, magenta,    magenta },
+	{ background, cyan,       cyan },
+	{ background, yellow,     yellow },
+	{ background, red,        red },
 };
 
 /* tagging */

@@ -1,0 +1,83 @@
+From 301db3986527041d64f4b58026677709a34b153f Mon Sep 17 00:00:00 2001
+From: dan soucy <dev@danso.ca>
+Date: Tue, 22 Mar 2022 03:15:00 -0400
+Subject: [PATCH] enable colored text in the status bar
+
+This patch is an update of statuscolors patch to work with 6.3.
+It is known to work up to commit bece862.
+---
+ config.def.h | 13 ++++++++++---
+ dwm.c        | 18 ++++++++++++++++--
+ 2 files changed, 26 insertions(+), 5 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index a2ac963..a635f76 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -12,10 +12,17 @@ static const char col_gray2[]       = "#444444";
+ static const char col_gray3[]       = "#bbbbbb";
+ static const char col_gray4[]       = "#eeeeee";
+ static const char col_cyan[]        = "#005577";
++static const char col_black[]       = "#000000";
++static const char col_red[]         = "#ff0000";
++static const char col_yellow[]      = "#ffff00";
++static const char col_white[]       = "#ffffff";
++
+ static const char *colors[][3]      = {
+-	/*               fg         bg         border   */
+-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
++	/*					fg         bg          border   */
++	[SchemeNorm] =	 { col_gray3, col_gray1,  col_gray2 },
++	[SchemeSel]  =	 { col_gray4, col_cyan,   col_cyan },
++	[SchemeWarn] =	 { col_black, col_yellow, col_red },
++	[SchemeUrgent]=	 { col_white, col_red,    col_red },
+ };
+ 
+ /* tagging */
+diff --git a/dwm.c b/dwm.c
+index 5f16260..3c5e26b 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -59,7 +59,7 @@
+ 
+ /* enums */
+ enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
+-enum { SchemeNorm, SchemeSel }; /* color schemes */
++enum { SchemeNorm, SchemeSel, SchemeWarn, SchemeUrgent }; /* color schemes */
+ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
+        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
+        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
+@@ -701,6 +701,10 @@ drawbar(Monitor *m)
+ 	int boxs = drw->fonts->h / 9;
+ 	int boxw = drw->fonts->h / 6 + 2;
+ 	unsigned int i, occ = 0, urg = 0;
++	char *ts = stext;
++	char *tp = stext;
++	int tx = 0;
++	char ctmp;
+ 	Client *c;
+ 
+ 	if (!m->showbar)
+@@ -710,7 +714,17 @@ drawbar(Monitor *m)
+ 	if (m == selmon) { /* status is only drawn on selected monitor */
+ 		drw_setscheme(drw, scheme[SchemeNorm]);
+ 		tw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
+-		drw_text(drw, m->ww - tw, 0, tw, bh, 0, stext, 0);
++		while (1) {
++			if ((unsigned int)*ts > LENGTH(colors)) { ts++; continue ; }
++			ctmp = *ts;
++			*ts = '\0';
++			drw_text(drw, m->ww - tw + tx, 0, tw - tx, bh, 0, tp, 0);
++			tx += TEXTW(tp) -lrpad;
++			if (ctmp == '\0') { break; }
++			drw_setscheme(drw, scheme[(unsigned int)(ctmp-1)]);
++			*ts = ctmp;
++			tp = ++ts;
++		}
+ 	}
+ 
+ 	for (c = m->clients; c; c = c->next) {
+-- 
+2.35.1
+
