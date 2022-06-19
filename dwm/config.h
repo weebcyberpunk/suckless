@@ -8,6 +8,7 @@ static const Gap default_gap        = {.isgap = 1, .realgap = 25, .gappx = 25};
 static const unsigned int snap      = 12;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int startontag         = 0;        /* 0 means no tag active on start */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Fira Code Nerd Font:style=Medium:size=14:antialias=true:hinting=true" };
 static const char dmenufont[]       = "Fira Code Nerd Font:style=Medium:size=14";
