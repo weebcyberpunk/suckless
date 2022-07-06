@@ -85,7 +85,7 @@ static const char *dec_mpd_vol[] = { "mpc", "volume", "-10", NULL };
 static const char *clear_mpd_list[] = { "mpc", "clear", NULL };
 
 // launchers
-static const char *open_browser_cmd[] = { "qutebrowser", NULL };
+static const char *open_browser_cmd[] = { "firefox", NULL };
 static const char *open_vim_cmd[] = { TERM, "-e", "nvim", NULL };
 static const char *open_ncmpcpp_cmd[] = { TERM, "-e", "ncmpcpp", NULL };
 static const char *screenshot_cmd[] = { "gnome-screenshot", "-i", NULL };
