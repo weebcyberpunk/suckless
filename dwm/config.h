@@ -99,7 +99,6 @@ static const char *passmenucmd[] = { "passmenu", "--type", NULL };
 static const char *logoutcmd[] = { SCRIPTS_HOME"dmenu_shutdown", NULL };
 static const char *projects_menu_cmd[] = { SCRIPTS_HOME"dmenu_projects", NULL };
 static const char *web_menu_cmd[] = { SCRIPTS_HOME"dmenu_web", NULL };
-static const char *ffmpegcmd[] = { SCRIPTS_HOME"dmenu-ffmpeg", NULL };
 static const char *musicmenu[] = { SCRIPTS_HOME"dmenu_mpd", NULL };
 static const char *monitors[] = { SCRIPTS_HOME"monitors", NULL };
 
@@ -161,7 +160,6 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_l,      spawn,          {.v = logoutcmd } },	
 	{ MODKEY,                       XK_d,      spawn,          {.v = projects_menu_cmd } },	
 	{ MODKEY,                       XK_b,      spawn,          {.v = web_menu_cmd } },	
-	{ MODKEY|ControlMask,           XK_r,      spawn,          {.v = ffmpegcmd } },	
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = musicmenu } },	
 	
 	// audio
