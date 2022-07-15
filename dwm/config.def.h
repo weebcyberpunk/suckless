@@ -35,10 +35,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
-	{ "Gnome-screenshot", NULL, "Screenshot",  0,          1,           0,         1,       -1 },
-	{ "Galculator",   NULL, "galculator",  	   0,          1,           0,         1,       -1 },
-	{ TERM          , NULL,     NULL,          0,          0,           1,         0,       -1 },
+	/* class            instance   title  tags mask   isfloating   isterminal noswallow monitor */
+	{ "Gnome-screenshot", NULL, "Screenshot", 0,          1,           0,         1,       -1 },
+	{ "Galculator",       NULL, "galculator", 0,          1,           0,         1,       -1 },
+	{ "mpv",              NULL,     NULL,  	  0,          1,           0,         1,       -1 },
+	{ TERM,               NULL,     NULL,     0,          0,           1,         0,       -1 },
 
 };
 
@@ -126,6 +127,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_minus,  togglefullscr,  {0} },
 	{ MODKEY|ShiftMask, 		XK_s, 	   togglesticky,   {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
