@@ -35,11 +35,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class            instance   title  tags mask   isfloating   isterminal noswallow monitor */
-	{ "Gnome-screenshot", NULL, "Screenshot", 0,          1,           0,         1,       -1 },
-	{ "Galculator",       NULL, "galculator", 0,          1,           0,         1,       -1 },
-	{ "mpv",              NULL,     NULL,  	  0,          1,           0,         1,       -1 },
-	{ TERM,               NULL,     NULL,     0,          0,           1,         0,       -1 },
+	/* class             instance      title  tags mask   isfloating   isterminal noswallow monitor */
+	{ "Gnome-screenshot", NULL,    "Screenshot", 0,          1,           0,         1,       -1 },
+	{ "Galculator",       NULL,    "galculator", 0,          1,           0,         1,       -1 },
+	{ "mpv",              NULL,        NULL,     0,          1,           0,         1,       -1 },
+	{ TERM,               NULL,        NULL,     0,          0,           1,         0,       -1 },
+	{ "st-calculator",    NULL, "st-calculator", 0,          1,           0,         1,       -1 },
 
 };
 
@@ -93,7 +94,7 @@ static const char *screenshot_cmd[] = { "gnome-screenshot", "-i", NULL };
 static const char *open_htop_cmd[] = { TERM, "-e", "htop", NULL };
 static const char *open_fm_cmd[] = { TERM, "-e", "lf", NULL };
 static const char *sys_upgrade[] = { SCRIPTS_HOME"upgrade", NULL };
-static const char *open_calculator[] = { "galculator", NULL };
+static const char *open_calculator[] = { TERM, "-c", "st-calculator", "-t", "st-calculator", "-e", SCRIPTS_HOME"calculator", NULL };
 
 // dmenu
 static const char *passmenucmd[] = { "passmenu", "--type", NULL };
