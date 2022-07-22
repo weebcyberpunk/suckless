@@ -107,9 +107,9 @@ unsigned int tabspaces = 8;
 float alpha = 0.95;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *palettes[][16] = {
-    { // Catppuccin mocha
-	"#1E1E2E",
+static const char *colorname[] = {
+	/* 8 normal colors */
+	"#6E6C7E",
 	"#F28FAD",
 	"#ABE9B3",
 	"#FAE3B0",
@@ -117,6 +117,8 @@ static const char *palettes[][16] = {
 	"#F5C2E7",
 	"#89DCEB",
 	"#D9E0EE",
+
+	/* 8 bright colors */
 	"#988BA2",
 	"#F28FAD",
 	"#ABE9B3",
@@ -125,88 +127,23 @@ static const char *palettes[][16] = {
 	"#F5C2E7",
 	"#89DCEB",
 	"#D9E0EE",
-    }, { // Catppuccin frappe
-        "#EFF1F5",
-        "#D20F39",
-        "#40A02B",
-        "#DF8E1D",
-        "#1E66F5",
-        "#EA76CB",
-        "#179299",
-        "#4C4F69",
-        
-        "#BCC0CC",
-        "#D20F39",
-        "#40A02B",
-        "#DF8E1D",
-        "#1E66F5",
-        "#EA76CB",
-        "#179299",
-        "#6C6F85",
-    }, { // Matrix
-        "#000000",
-        "#55ff55",
-        "#00cc00",
-        "#00cc00",
-        "#005500",
-        "#55ff55",
-        "#00cc00",
-        "#00cc00",
-        "#000000",
-        "#55ff55",
-        "#55ff55",
-        "#55ff55",
-        "#005500",
-        "#55ff55",
-        "#55ff55",
-        "#00cc00",
-    }, { // Solarized Dark
-        "#002b36",
-        "#dc322f",
-        "#859900",
-        "#b58900",
-        "#268bd2",
-        "#6c71c4",
-        "#2aa198",
-        "#93a1a1",
-        "#657b83",
-        "#dc322f",
-        "#859900",
-        "#b58900",
-        "#268bd2",
-        "#6c71c4",
-        "#2aa198",
-        "#fdf6e3",
-    }, { // Solarized Light
-        "#fdf6e3",
-        "#dc322f",
-        "#859900",
-        "#b58900",
-        "#268bd2",
-        "#6c71c4",
-        "#2aa198",
-        "#586e75",
 
-        "#002b36",
-        "#dc322f",
-        "#859900",
-        "#b58900",
-        "#268bd2",
-        "#6c71c4",
-        "#2aa198",
-        "#002b36",
-    },
+
+
+[256] = "#D9E0EE", /* default foreground colour */
+[257] = "#1E1E2E", /* default background colour */
+[258] = "#C3BAC6", /*575268*/
+
 };
 
-static const char **colorname;
 
 /*
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 7;
-static unsigned int defaultrcs = 1;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 258;
 
 /*
  * Default shape of cursor
@@ -278,15 +215,6 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Return,      newterm,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_1,           setpalette,     {.i =  0} },
-	{ MODKEY,               XK_2,           setpalette,     {.i =  1} },
-	{ MODKEY,               XK_3,           setpalette,     {.i =  2} },
-	{ MODKEY,               XK_4,           setpalette,     {.i =  3} },
-	{ MODKEY,               XK_5,           setpalette,     {.i =  4} },
-	{ MODKEY,               XK_6,           setpalette,     {.i =  5} },
-	{ MODKEY,               XK_7,           setpalette,     {.i =  6} },
-	{ MODKEY,               XK_8,           setpalette,     {.i =  7} },
-	{ MODKEY,               XK_9,           setpalette,     {.i =  8} },
 };
 
 /*
@@ -558,4 +486,3 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
