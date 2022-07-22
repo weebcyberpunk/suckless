@@ -93,6 +93,16 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/*
+ *
+ * Name : Catppuccin
+ * author : tsjazil (https://github.com/tsjazil)
+ * 
+ * Soothing pastel theme for the high-spirited!
+ *
+ */
+
+
 /* bg opacity */
 float alpha = 0.95;
 
